@@ -163,11 +163,11 @@
 	},
 	"sources": {
 		"contracts/Token.sol": {
-			"keccak256": "0x1b59ee99aedb9786fedf6b79aa6a842e0be7173346860f4d5ce7cb9eda3ab202",
+			"keccak256": "0xd85e0cf9831ce0104af1b7d6abeebb5fd00fe0242e867e6e75246b5088c949ab",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://ea18fb38e3c6bb6cefc49b197fed1fc19bba7d6c31a86f1390195fe58df3becc",
-				"dweb:/ipfs/QmcGM3FtRz2dwRbr6nTVtz3o5NBb6sePYeWGoF1hEC1ZAN"
+				"bzz-raw://17989750eb376a5c03f9be828d9135389b1b6a58cec2bf93f4ebbc09ede426a1",
+				"dweb:/ipfs/QmaNGnqgw4bkNyesVuxAAYjy2CLN14zCuQyyCuxAtHR1m2"
 			]
 		},
 		"hardhat/console.sol": {
