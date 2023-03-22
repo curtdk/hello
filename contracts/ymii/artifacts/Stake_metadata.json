@@ -25,19 +25,6 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
-				"name": "_1per",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -46,19 +33,6 @@
 					}
 				],
 				"name": "_inviteNum",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "_inviteReward",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -109,6 +83,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "_proportion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "_rewardToken",
 				"outputs": [
 					{
@@ -135,33 +122,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "_stake1pure",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "_stake3",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "_stake3pure",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -187,12 +148,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "_stake5pure",
+				"name": "_stakeToken",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -200,12 +161,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "_stakeToken",
+				"name": "_stakedk",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -238,7 +199,45 @@
 						"type": "address"
 					}
 				],
+				"name": "_userEndClaimTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"name": "_userLastClaimTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "_userPower",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -315,6 +314,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "cancalStackOver",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "claimReward",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -325,38 +331,6 @@
 				"name": "claimStakeReward",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getBlockNow",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "user",
-						"type": "address"
-					}
-				],
-				"name": "getUserStakeTotalTime",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -402,62 +376,6 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "token",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "recipient",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "ownerClaimToken",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "user",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "stakeTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "stakeStartTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "userLastClaim",
-						"type": "uint256"
-					}
-				],
-				"name": "ownerSetUser",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
 						"name": "user",
 						"type": "address"
 					}
@@ -477,24 +395,11 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_1",
+						"name": "proportion_",
 						"type": "uint256"
 					}
 				],
-				"name": "set1per",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_invite",
-						"type": "uint256"
-					}
-				],
-				"name": "setInviteReward",
+				"name": "setProportion",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -508,29 +413,6 @@
 					}
 				],
 				"name": "setRewardToken",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_1",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_2",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_3",
-						"type": "uint256"
-					}
-				],
-				"name": "setStakePure",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -569,6 +451,32 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "setUserBlacklist",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "paramOwner",
+						"type": "address"
+					}
+				],
+				"name": "setowner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
@@ -581,6 +489,11 @@
 					{
 						"internalType": "uint256",
 						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_lpPrice",
 						"type": "uint256"
 					}
 				],
@@ -601,6 +514,13 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -616,7 +536,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/stake.sol": "Stake"
+			"contracts/ymii/stake1.sol": "Stake"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -630,12 +550,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/stake.sol": {
-			"keccak256": "0x339e059c5025fecebb0e7a4ceeb3cee634172757c667f4568de4ecd3123c82e6",
+		"contracts/ymii/stake1.sol": {
+			"keccak256": "0x7ec9398011c5d4816972b79772a5c228485094fbc73579189b844d05b3289178",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0a2247bb6259ad032919f215bc97463c322b41feca54f0257f423c42cd5ce880",
-				"dweb:/ipfs/QmUHE2JKXhcpaAuj3Vrqd7Y3ktXRpD5cq7sJDJvjqnYhiv"
+				"bzz-raw://fc494bd44ab9d42956145dbd6eb3642757e93e53e899ba86f4f2d47bb86f928a",
+				"dweb:/ipfs/QmbovBBi7cTGZy2wp6WPR5pQ8YuXte1qv8PqaM92ZhtwMh"
 			]
 		}
 	},
