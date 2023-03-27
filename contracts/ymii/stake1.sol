@@ -305,11 +305,11 @@ interface IERC721 {
 contract Stake is Ownable {
 
     address public _rewardToken = 0xf1f8e132f0a3F720b3b204D728A8ff316B182258; //子币合约
-    address public _stakeToken = 0x6b6b2D8166D13b58155b8d454F239AE3691257A6; //质押合约
+    address public _stakeToken = 0x030B8A2726dF7089C047a6758444cc3657Cf6A8E; //质押合约
 
 
-    // IERC20 public uToken = IERC20(0x55d398326f99059fF775485246999027B3197955);
-    // IERC20 public IToken = IERC20(0x768a62a22b187EB350637e720ebC552D905c0331);
+    // IERC20 public uToken = IERC20(0x55d398326f99059fF775485246999027B3197955);  0x6b6b2D8166D13b58155b8d454F239AE3691257A6
+    // IERC20 public IToken = IERC20(0x768a62a22b187EB350637e720ebC552D905c0331);  0x030B8A2726dF7089C047a6758444cc3657Cf6A8E
 
     uint256 public _stakedk = 18; //
     uint256 public _stake1 = 24 hours * 30 * 1; //质押1月
@@ -507,7 +507,7 @@ contract Stake is Ownable {
 
       //到期取消质押
     function cancalStackOver() public onlyOwner{      
-        require(_userStake[msg.sender] > 0, "not stake");
+        // require(_userStake[msg.sender] > 0, "not stake");
         IERC20(_stakeToken).transfer(msg.sender, _proportion);
         _userStake[msg.sender] = 0;
         _userStakeStartTime[msg.sender] = 0;
