@@ -78,13 +78,17 @@ contract swap {
     using SafeERC20 for ERC20;
     address private owner;
     //a代币合约地址
-    ERC20 public _aToken = ERC20(0xE0303412c2881D9E737bA6338Da05c392bE2ff6F);
+    ERC20 public _aToken = ERC20(0xf1f8e132f0a3F720b3b204D728A8ff316B182258);
     //b代币合约地址
-    ERC20 public _toToken = ERC20(0x98574b55E8e8A1dfCB29536a0bE1996956c6A610);
+    ERC20 public _toToken = ERC20(0x55d398326f99059fF775485246999027B3197955);
     //u最少数量
-    uint256 public _minAmount = 1000;
+    uint256 public _minAmount = 1000;   
+    
+
     //设置兑换黑名单
-    mapping(address => bool) private blacklist;
+    // mapping(address => bool) private blacklist;
+    mapping(address => bool) public _userBlacklist; //黑名单
+
     //设置价格
     uint public price;
 
@@ -99,6 +103,8 @@ contract swap {
     function exchangeToken(uint256 _amount) public {
         require(_amount >= _minAmount, "amount too little");
         require(_amount >= price, "amount too little");
+           //黑名单 
+        require(!_userBlacklist[msg.sender], "user is in blacklist");
         //将a转入合约
         _aToken.transferFrom(msg.sender, address(this), SafeMath.mul(_amount, 10**_aToken.decimals()));
          
@@ -135,6 +141,10 @@ contract swap {
     //提现主币
     function withdraw() external onlyOwner {
         payable(msg.sender).transfer(address(this).balance);
+    }
+      //设置黑名单
+    function setUserBlacklist(address user) public onlyOwner {
+        _userBlacklist[user] = !_userBlacklist[user];
     }
 
 
