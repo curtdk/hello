@@ -84,7 +84,8 @@ contract swap {
     //u最少数量
     uint256 public _minAmount = 1000;
     //设置兑换黑名单
-    mapping(address => bool) private blacklist;
+    // mapping(address => bool) private blacklist;
+    mapping(address => bool) public _userBlacklist; //黑名单
     //设置价格
     uint public price;
 
@@ -99,6 +100,8 @@ contract swap {
     function exchangeToken(uint256 _amount) public {
         require(_amount >= _minAmount, "amount too little");
         require(_amount >= price, "amount too little");
+        //黑名单 
+         require(!_userBlacklist[msg.sender], "user is in blacklist");
         //将a转入合约
         _aToken.transferFrom(msg.sender, address(this), SafeMath.mul(_amount, 10**_aToken.decimals()));
          
@@ -135,6 +138,10 @@ contract swap {
     //提现主币
     function withdraw() external onlyOwner {
         payable(msg.sender).transfer(address(this).balance);
+    }
+     //设置黑名单
+    function setUserBlacklist(address user) public onlyOwner {
+        _userBlacklist[user] = !_userBlacklist[user];
     }
 
 
