@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ebcTrans/stakeEbcV1.sol": "Math"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ebcTrans/stakeEbcV1.sol": {
+			"keccak256": "0x952baa58ee5fb1888ab0fdea21d9d42cb2160b2015cbb531bc7df1071c7e8e7d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://52ccda91c357748c32c0abd67988b7a31b57cb7602ce436d4db0d1963d962119",
+				"dweb:/ipfs/QmP9TjVH3rNqDEmMguesFeBRvSqH9j7anoXZu6nUbwWBAD"
+			]
+		}
+	},
+	"version": 1
+}

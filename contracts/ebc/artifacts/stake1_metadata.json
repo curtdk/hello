@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "lpPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ebc/stakeEbc.sol": "stake1"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ebc/stakeEbc.sol": {
+			"keccak256": "0xa88305fb885ac0d8ec8d31414ec9a2a2e8afa154667974463ed3949f079f7dbd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d2030eac7b3a9b682b7288295a69ade28d40a0e927a460d2d5b3bf450533f3e3",
+				"dweb:/ipfs/QmZnYstnc5NivMBmzjQPR9A4YexKcEtFhcfXm7oBGof7bf"
+			]
+		}
+	},
+	"version": 1
+}

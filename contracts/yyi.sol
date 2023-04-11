@@ -42,7 +42,6 @@ contract ERC20 is IERC20, IERC20Metadata {
     string private _symbol;
     uint8 private _decimals;
     address payable public   adminAddress;
-
     modifier isAdmin(){
         require(msg.sender == adminAddress, 'no admin');
         _;

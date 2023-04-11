@@ -83,6 +83,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "_lpPriceToken",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "_proportion",
 				"outputs": [
 					{
@@ -154,19 +167,6 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "_stakedk",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -313,7 +313,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
 				"name": "cancalStackOver",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -361,6 +367,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "lpPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -370,6 +389,49 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "stakeTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "stakeStartTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "userLastClaim",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "userPower",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "userEndClaimTime",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerSetUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -400,19 +462,6 @@
 					}
 				],
 				"name": "setProportion",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "token",
-						"type": "address"
-					}
-				],
-				"name": "setRewardToken",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -465,11 +514,11 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "paramOwner",
+						"name": "token",
 						"type": "address"
 					}
 				],
-				"name": "setowner",
+				"name": "setlpPriceToken",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -489,11 +538,6 @@
 					{
 						"internalType": "uint256",
 						"name": "time",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_lpPrice",
 						"type": "uint256"
 					}
 				],
@@ -536,7 +580,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ymii/stake1.sol": "Stake"
+			"contracts/ymii/stake2.sol": "Stake"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -550,12 +594,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ymii/stake1.sol": {
-			"keccak256": "0x7ec9398011c5d4816972b79772a5c228485094fbc73579189b844d05b3289178",
+		"contracts/ymii/stake2.sol": {
+			"keccak256": "0x964297f8bc5df05fdb5dc37ad09a0852a6627893e0f687781b8e478c3cdd693f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fc494bd44ab9d42956145dbd6eb3642757e93e53e899ba86f4f2d47bb86f928a",
-				"dweb:/ipfs/QmbovBBi7cTGZy2wp6WPR5pQ8YuXte1qv8PqaM92ZhtwMh"
+				"bzz-raw://f642844424d09616d8295c4dffddc6533a0279898d3b0227887d1753f0e99575",
+				"dweb:/ipfs/QmUqH5LuEXpaApUZaX1Ey1tQR2CAxUc8hjEfssUoZdX2pK"
 			]
 		}
 	},

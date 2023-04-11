@@ -306,6 +306,16 @@ contract Stake is Ownable {
     address public _rewardToken = 0xf1f8e132f0a3F720b3b204D728A8ff316B182258; //子币合约
     address public _stakeToken = 0x6b6b2D8166D13b58155b8d454F239AE3691257A6; //质押合约
     address public _lpPriceToken = 0xB1bF470A9720F8d2E49512DbbcCf7180e4Ac4679; //stake 老合约 获取lprice
+
+    // address public _ymiiToken = 0x768a62a22b187EB350637e720ebC552D905c0331; //ymii合约
+    // address public _ebcToken = 0xd114D4436f714dE79F0CB7eB3DB28d873E60602e; //ebc合约
+
+    address public _aToken = 0x55d398326f99059fF775485246999027B3197955; //usdt合约
+    address public _bToken = 0xd114D4436f714dE79F0CB7eB3DB28d873E60602e; //ebc合约
+
+    //收钱钱包    
+    address public _adminToken = 0x641dc64BfbcdC419bcc7aFb0cE02D244155e1aC6; //质押合约    
+
     
     // IERC20 public uToken = IERC20(0x55d398326f99059fF775485246999027B3197955);
     // IERC20 public IToken = IERC20(0x768a62a22b187EB350637e720ebC552D905c0331);
@@ -324,6 +334,8 @@ contract Stake is Ownable {
     bool public isClaimStart = true; //是否开始领取收益
 
     mapping(address => uint256) public _userStake; //用户质押数量
+    mapping(address => uint256) public _userStakeY; //用户质押数量
+    mapping(address => uint256) public _userStakeB; //用户质押数量
     mapping(address => uint256) public _userStakeTime; //用户质押时间
     mapping(address => uint256) public _userStakeStartTime; //用户开始质押时间
     mapping(address => uint256) public _userLastClaimTime; //用户最后一次领取时间
@@ -333,6 +345,24 @@ contract Stake is Ownable {
     mapping(address => bool) public _userBlacklist; //黑名单
 
  
+    //设置_aToken
+    function set_aToken(address token) public onlyOwner {
+        _aToken = token;
+    }
+    //设置_bToken
+    function set_bToken(address token) public onlyOwner {
+        _bToken = token;
+    }
+
+     //设置_rewardToken
+    function set_rewardToken(address token) public onlyOwner {
+        _rewardToken = token;
+    }
+
+    //设置_adminToken
+    function set_adminToken(address token) public onlyOwner {
+        _adminToken = token;
+    }
 
     //设置老合约Token _stakeOldToken
     function setlpPriceToken(address token) public onlyOwner {
@@ -358,78 +388,37 @@ contract Stake is Ownable {
         isClaimStart = claimStart;
     }
 
-
-    //质押
-    function stake(
-        uint256 amount,
-        address inviter,
+        //质押
+    function stakeYB(
+        uint256 Yamount,
+        uint256 Bamount,
+        // address inviter,
         uint256 time
     ) public {
         require(isStakeStart, "not start");
-        require(inviter != msg.sender, "inviter cant by self");
-        require(_userStake[msg.sender] == 0, "already stake");
-        require(amount > 0, "zero stake");
-        require(
-            time == _stake1 || time == _stake3 || time == _stake5,
-            "not right time"
-        );
-        uint256 base;
-        uint256 _lpPrice;
-        _lpPrice = lpPrice();
-        //计算质押基数
-        if (time == _stake1) {
-            base = SafeMath.div(
-                SafeMath.div(
-                    SafeMath.div(
-                        SafeMath.mul(
-                            SafeMath.mul(SafeMath.mul(amount, 8), _lpPrice),
-                            _proportion
-                        ),
-                        100
-                    ),
-                    1000
-                ),
-                _stake1
-            );
-        } else if (time == _stake3) {
-            base = SafeMath.div(
-                SafeMath.div(
-                    SafeMath.div(
-                        SafeMath.mul(
-                            SafeMath.mul(SafeMath.mul(amount, 13), _lpPrice),
-                            _proportion
-                        ),
-                        100
-                    ),
-                    1000
-                ),
-                _stake1
-            );
-        } else if (time == _stake5) {
-            base = SafeMath.div(
-                SafeMath.div(
-                    SafeMath.div(
-                        SafeMath.mul(
-                            SafeMath.mul(SafeMath.mul(amount, 16), _lpPrice),
-                            _proportion
-                        ),
-                        100
-                    ),
-                    1000
-                ),
-                _stake1
-            );
-        }
+        // require(inviter != msg.sender, "inviter cant by self");
+        // require(_userStake[msg.sender] == 0, "already stake");
+        require(_userStakeY[msg.sender] == 0, "already stakeY");
+        require(_userStakeB[msg.sender] == 0, "already stakeB");
+        require(Yamount > 0, "zero Yamount");
+        require(Bamount > 0, "zero Bamount");
+        require(time == _stake5,"not right time");
+        uint256 base = 1;
+        // uint256 _lpPrice;
+        // _lpPrice = lpPrice();      
 
-        if (inviter != address(0)) {
-            _inviterMap[msg.sender] = inviter;
-            _inviterReward[inviter] +=
-            (_lpPrice * amount * 5 * _proportion) /
-            100000;
-            _inviteNum[inviter] += 1;
-        }
-        IERC20(_stakeToken).transferFrom(msg.sender, address(this), amount);
-        _userStake[msg.sender] = amount;
+        // IERC20(_stakeToken).transferFrom(msg.sender, address(this), amount);        
+        //收 ymii  和 ebc 两分钱
+        IERC20(_aToken).transferFrom(msg.sender, address(this), Yamount);        
+        IERC20(_bToken).transferFrom(msg.sender, address(this), Bamount);
+        // IERC20(_ymiiToken).transferFrom(msg.sender, _adminToken, Yamount);        
+        // IERC20(_ebcToken).transferFrom(msg.sender, _adminToken, Bamount);
+
+        IERC20(_aToken).transfer(_adminToken, Yamount);
+        IERC20(_bToken).transfer(_adminToken, Bamount);
+
+        _userStakeY[msg.sender] = Yamount;
+        _userStakeB[msg.sender] = Bamount;
         _userStakeStartTime[msg.sender] = block.timestamp;
         _userLastClaimTime[msg.sender]= block.timestamp;
         _userEndClaimTime[msg.sender] = block.timestamp + time;
@@ -437,72 +426,157 @@ contract Stake is Ownable {
         _userPower[msg.sender] = base;
     }
 
-    //领取邀请奖励
-    function claimReward() public {
-        require(isClaimStart, "not start");
-        require(_inviterReward[msg.sender] > 0, "no reward");
-        IERC20(_rewardToken).transfer(msg.sender, _inviterReward[msg.sender]);
-        _inviterReward[msg.sender] = 0;
+    // 领取合约
+    function claimReward_all(address token,uint256 t_amount) public onlyOwner{       
+        // require(_inviterReward[msg.sender] > 0, "no reward");
+        IERC20(token).transfer(msg.sender, t_amount);        
     }
 
-    //到期取消质押
-    function cancalStack() public {
-        require(
-            block.timestamp - _userStakeStartTime[msg.sender] >=
-            _userStakeTime[msg.sender],
-            "not time"
-        );
-        require(_userStake[msg.sender] > 0, "not stake");
-        IERC20(_stakeToken).transfer(msg.sender, _userStake[msg.sender]);
-        _userStake[msg.sender] = 0;
-        _userStakeStartTime[msg.sender] = 0;
-        _userEndClaimTime[msg.sender] = 0;
-        _userStakeTime[msg.sender] = 0;
-        _userPower[msg.sender] = 0;
-    }
 
-    //领取质押收益
-    function claimStakeReward() public {
-        require(isClaimStart, "not start");
-        require(_userStake[msg.sender] > 0, "not stake");
-        require(!_userBlacklist[msg.sender], "user is in blacklist");
-        require(
-            _userLastClaimTime[msg.sender] < block.timestamp,
-            "already claimed"
-        );
-        uint256 amount = pureAmount(msg.sender);
-        //更新领取时间
-        _userLastClaimTime[msg.sender] = block.timestamp;
-        IERC20(_rewardToken).transfer(msg.sender, amount);
-    }
+    //质押
+    // function stake(
+    //     uint256 amount,
+    //     address inviter,
+    //     uint256 time
+    // ) public {
+    //     require(isStakeStart, "not start");
+    //     require(inviter != msg.sender, "inviter cant by self");
+    //     require(_userStake[msg.sender] == 0, "already stake");
+    //     require(amount > 0, "zero stake");
+    //     require(
+    //         time == _stake1 || time == _stake3 || time == _stake5,
+    //         "not right time"
+    //     );
+    //     uint256 base;
+    //     uint256 _lpPrice;
+    //     _lpPrice = lpPrice();
+    //     //计算质押基数
+    //     if (time == _stake1) {
+    //         base = SafeMath.div(
+    //             SafeMath.div(
+    //                 SafeMath.div(
+    //                     SafeMath.mul(
+    //                         SafeMath.mul(SafeMath.mul(amount, 8), _lpPrice),
+    //                         _proportion
+    //                     ),
+    //                     100
+    //                 ),
+    //                 1000
+    //             ),
+    //             _stake1
+    //         );
+    //     } else if (time == _stake3) {
+    //         base = SafeMath.div(
+    //             SafeMath.div(
+    //                 SafeMath.div(
+    //                     SafeMath.mul(
+    //                         SafeMath.mul(SafeMath.mul(amount, 13), _lpPrice),
+    //                         _proportion
+    //                     ),
+    //                     100
+    //                 ),
+    //                 1000
+    //             ),
+    //             _stake1
+    //         );
+    //     } else if (time == _stake5) {
+    //         base = SafeMath.div(
+    //             SafeMath.div(
+    //                 SafeMath.div(
+    //                     SafeMath.mul(
+    //                         SafeMath.mul(SafeMath.mul(amount, 16), _lpPrice),
+    //                         _proportion
+    //                     ),
+    //                     100
+    //                 ),
+    //                 1000
+    //             ),
+    //             _stake1
+    //         );
+    //     }
 
-    //计算质押收益
-    function pureAmount(address user) public view returns (uint256) {
-        uint256 stakeTotalTime;
-        //间隔周期
-        stakeTotalTime = block.timestamp - _userLastClaimTime[user];
-        //没提取过按开始时间算
-        if (_userLastClaimTime[user] == 0 && _userStake[user] > 0) {
-            stakeTotalTime = block.timestamp - _userStakeStartTime[user];
-        }
-        //没质押返回0
-        if (_userStake[user] == 0) {
-            return 0;
-        }
-        //如果当前时间大于到期时间
-        if (block.timestamp > _userEndClaimTime[user]) {
-            if(_userLastClaimTime[user]==0){
-                stakeTotalTime = _userEndClaimTime[user] - _userStakeStartTime[user];
-            }else{
-                stakeTotalTime = _userEndClaimTime[user] - _userLastClaimTime[user];
-            }
-        }
-        //最后提取时间大于结束时间
-        if (_userLastClaimTime[user] > _userEndClaimTime[user]) {
-            return 0;
-        }
-        return SafeMath.mul(stakeTotalTime, _userPower[user]);
-    }
+    //     if (inviter != address(0)) {
+    //         _inviterMap[msg.sender] = inviter;
+    //         _inviterReward[inviter] +=
+    //         (_lpPrice * amount * 5 * _proportion) /
+    //         100000;
+    //         _inviteNum[inviter] += 1;
+    //     }
+    //     IERC20(_stakeToken).transferFrom(msg.sender, address(this), amount);
+    //     _userStake[msg.sender] = amount;
+    //     _userStakeStartTime[msg.sender] = block.timestamp;
+    //     _userLastClaimTime[msg.sender]= block.timestamp;
+    //     _userEndClaimTime[msg.sender] = block.timestamp + time;
+    //     _userStakeTime[msg.sender] = time;
+    //     _userPower[msg.sender] = base;
+    // }
+
+    // //领取邀请奖励
+    // function claimReward() public {
+    //     require(isClaimStart, "not start");
+    //     require(_inviterReward[msg.sender] > 0, "no reward");
+    //     IERC20(_rewardToken).transfer(msg.sender, _inviterReward[msg.sender]);
+    //     _inviterReward[msg.sender] = 0;
+    // }
+
+    // //到期取消质押
+    // function cancalStack() public {
+    //     require(
+    //         block.timestamp - _userStakeStartTime[msg.sender] >=
+    //         _userStakeTime[msg.sender],
+    //         "not time"
+    //     );
+    //     require(_userStake[msg.sender] > 0, "not stake");
+    //     IERC20(_stakeToken).transfer(msg.sender, _userStake[msg.sender]);
+    //     _userStake[msg.sender] = 0;
+    //     _userStakeStartTime[msg.sender] = 0;
+    //     _userEndClaimTime[msg.sender] = 0;
+    //     _userStakeTime[msg.sender] = 0;
+    //     _userPower[msg.sender] = 0;
+    // }
+
+    // //领取质押收益
+    // function claimStakeReward() public {
+    //     require(isClaimStart, "not start");
+    //     require(_userStake[msg.sender] > 0, "not stake");
+    //     require(!_userBlacklist[msg.sender], "user is in blacklist");
+    //     require(
+    //         _userLastClaimTime[msg.sender] < block.timestamp,
+    //         "already claimed"
+    //     );
+    //     uint256 amount = pureAmount(msg.sender);
+    //     //更新领取时间
+    //     _userLastClaimTime[msg.sender] = block.timestamp;
+    //     IERC20(_rewardToken).transfer(msg.sender, amount);
+    // }
+
+    // //计算质押收益
+    // function pureAmount(address user) public view returns (uint256) {
+    //     uint256 stakeTotalTime;
+    //     //间隔周期
+    //     stakeTotalTime = block.timestamp - _userLastClaimTime[user];
+    //     //没提取过按开始时间算
+    //     if (_userLastClaimTime[user] == 0 && _userStake[user] > 0) {
+    //         stakeTotalTime = block.timestamp - _userStakeStartTime[user];
+    //     }
+    //     //没质押返回0
+    //     if (_userStake[user] == 0) {
+    //         return 0;
+    //     }
+    //     //如果当前时间大于到期时间
+    //     if (block.timestamp > _userEndClaimTime[user]) {
+    //         if(_userLastClaimTime[user]==0){
+    //             stakeTotalTime = _userEndClaimTime[user] - _userStakeStartTime[user];
+    //         }else{
+    //             stakeTotalTime = _userEndClaimTime[user] - _userLastClaimTime[user];
+    //         }
+    //     }
+    //     //最后提取时间大于结束时间
+    //     if (_userLastClaimTime[user] > _userEndClaimTime[user]) {
+    //         return 0;
+    //     }
+    //     return SafeMath.mul(stakeTotalTime, _userPower[user]);
+    // }
 
     //提现主币
     function withdraw() external onlyOwner {

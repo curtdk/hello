@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ymii/stake1.sol": "SafeMath"
+			"contracts/ymii/stake2.sol": "SafeMath"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ymii/stake1.sol": {
-			"keccak256": "0x7ec9398011c5d4816972b79772a5c228485094fbc73579189b844d05b3289178",
+		"contracts/ymii/stake2.sol": {
+			"keccak256": "0x964297f8bc5df05fdb5dc37ad09a0852a6627893e0f687781b8e478c3cdd693f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fc494bd44ab9d42956145dbd6eb3642757e93e53e899ba86f4f2d47bb86f928a",
-				"dweb:/ipfs/QmbovBBi7cTGZy2wp6WPR5pQ8YuXte1qv8PqaM92ZhtwMh"
+				"bzz-raw://f642844424d09616d8295c4dffddc6533a0279898d3b0227887d1753f0e99575",
+				"dweb:/ipfs/QmUqH5LuEXpaApUZaX1Ey1tQR2CAxUc8hjEfssUoZdX2pK"
 			]
 		}
 	},

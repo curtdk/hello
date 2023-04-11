@@ -1,37 +1,17 @@
 {
 	"compiler": {
-		"version": "0.8.18+commit.87f61d96"
+		"version": "0.8.19+commit.7dd6d404"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "previousOwner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "OwnershipTransferred",
-				"type": "event"
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "token",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"name": "getLatestPrice",
 				"outputs": [
 					{
@@ -42,78 +22,20 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "renounceOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "token",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "priceFeed",
-						"type": "address"
-					}
-				],
-				"name": "setPriceFeed",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "transferOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {
-				"owner()": {
-					"details": "Returns the address of the current owner."
-				},
-				"renounceOwnership()": {
-					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
-				},
-				"transferOwnership(address)": {
-					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-				}
-			},
+			"methods": {},
 			"version": 1
 		},
 		"userdoc": {
 			"kind": "user",
 			"methods": {
-				"getLatestPrice(address)": {
+				"constructor": {
+					"notice": "Network: Kovan Aggregator: ETH/USD Address: 0x9326BFA02ADD2366b30bacB125260Af641031331"
+				},
+				"getLatestPrice()": {
 					"notice": "Returns the latest price"
 				}
 			},
@@ -122,7 +44,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/chainlink1.sol": "PriceConsumerV3"
+			"contracts/chainlink.sol": "PriceConsumerV3"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -144,28 +66,12 @@
 				"dweb:/ipfs/QmeZUVwd26LzK4Mfp8Zba5JbQNkZFfTzFu1A6FVMMZDg9c"
 			]
 		},
-		"@openzeppelin/contracts/access/Ownable.sol": {
-			"keccak256": "0xa1b27b3f44ff825974e5268e8f63ad3b03add5b464880d860fbb8cae043e17f7",
+		"contracts/chainlink.sol": {
+			"keccak256": "0xb73f31f90476e291b6ff64fb25d479a76221b4a37242094b2a3db765f764015c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ad0fb4425453220f15bdb8c4e009052839804bb725797b6d8c02ee2271bc3c23",
-				"dweb:/ipfs/QmPtjdMxzEifPUEUa6cKX1yfTWjaZV6QtdwMdN6bEL9FBM"
-			]
-		},
-		"@openzeppelin/contracts/utils/Context.sol": {
-			"keccak256": "0x7736c187e6f1358c1ea9350a2a21aa8528dec1c2f43b374a9067465a3a51f5d3",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://4fd625dca17657403af518cc6c8ab5c54c58898cf6e912ca2e1b0f3194ad0405",
-				"dweb:/ipfs/QmQVv7YeeKmaS11bg7YDTeeGDk6i7sV8LMMfohaLM4SiRu"
-			]
-		},
-		"contracts/chainlink1.sol": {
-			"keccak256": "0x631afed552d7ae4e958ad28ac43e3b032fb3076973224611fb02763dadca603b",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://8a4ecf54a771c07a7c9076346c88175b848203bcfe1f5dc7ca71b607a3516ddb",
-				"dweb:/ipfs/QmXfdehm3KhHctwa6wcLeoYMdBAJF9jGnoEuNHkJVCFADv"
+				"bzz-raw://8b4594fbd19da91f7c2b018ac89ede5e8951eb099d51a4ffde3c355df11ffde2",
+				"dweb:/ipfs/QmPE8hDdodwNtb1oam9FQKd7DWRdwhBsUbgzfDHAyZtzJv"
 			]
 		}
 	},

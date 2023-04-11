@@ -4,7 +4,7 @@ pragma solidity ^0.8.7;
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-import '@uniswap/v2-core/contracts/interfaces/IPancakeRouter.sol';
+
 
 contract PriceConsumerV3 is Ownable {
     mapping(address => AggregatorV3Interface) internal priceFeedMap;

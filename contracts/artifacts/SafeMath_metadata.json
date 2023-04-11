@@ -1,23 +1,30 @@
 {
 	"compiler": {
-		"version": "0.5.16+commit.9c3226ce"
+		"version": "0.8.13+commit.abaa5c0e"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [],
 		"devdoc": {
-			"methods": {}
+			"kind": "dev",
+			"methods": {},
+			"version": 1
 		},
 		"userdoc": {
-			"methods": {}
+			"kind": "user",
+			"methods": {},
+			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/lp.sol": "SafeMath"
+			"contracts/swap.sol": "SafeMath"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "london",
 		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
 		"optimizer": {
 			"enabled": false,
 			"runs": 200
@@ -25,11 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/lp.sol": {
-			"keccak256": "0x8d4c790c7157aa21bb148d5bb56a8c8519bc43fd87a2055eefa5ba58181543c9",
+		"contracts/swap.sol": {
+			"keccak256": "0x6981846abf8efa503b8aebfdfa935d31dec3a8a4ff41e11b7acaef1e22691df0",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://87287534dd1b84ea7204aa2e0f6a7bd74a566988f4aae14893731ee46561a02e",
-				"dweb:/ipfs/QmWiqCbNbkpkf864QjwuSbkpWANZ1nUeB1Hbu2x4mbA6pW"
+				"bzz-raw://20de969d5266c0d8eab32553725e18cacbff83b19a6465293ed229ae50a88ce3",
+				"dweb:/ipfs/QmZYaoNURuFbYtnLpKQmw5RVCyq2fAq4fU1YwKef5TwfkQ"
 			]
 		}
 	},

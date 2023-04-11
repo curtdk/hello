@@ -256,11 +256,11 @@
 	},
 	"sources": {
 		"contracts/yyi.sol": {
-			"keccak256": "0x05944c8be3a5fe92662378dffcded755d59b71f0460efd53bcb17e2d998dcfd6",
+			"keccak256": "0x7e2cad993d67e48fa8270c51999deaa7859ba0d6fac99c34f9af0f702140c83a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0e9d7cdb70708ce58b1f8098869a7b850f556b645970068c2c81ec83be1753c0",
-				"dweb:/ipfs/QmaoaDSTVvizz8H7Z5UpFPG8wzMF6W6jeND7RtX8LQjgjU"
+				"bzz-raw://83cdf8175c406e452678e660e7c548cde6640a71a1bfd98982f56820b74e52e1",
+				"dweb:/ipfs/QmVojmZtAAMV7ZedkKEyFGzwBeZFmKDjykrW8wXt3wwmTo"
 			]
 		}
 	},
