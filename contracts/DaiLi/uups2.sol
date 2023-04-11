@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // wtf.academy
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.17;
 // 新的UUPS逻辑合约
 contract UUPS2{
     // 状态变量和proxy合约一致，防止插槽冲突
