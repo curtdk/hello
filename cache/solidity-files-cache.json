@@ -984,8 +984,8 @@
       ]
     },
     "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\diali1\\Params.sol": {
-      "lastModificationDate": 1681205081951,
-      "contentHash": "5ba0df1ab1188500f9389c63ffa281a0",
+      "lastModificationDate": 1681266728014,
+      "contentHash": "a57a05e52c8c31798135191457a3bde0",
       "sourceName": "contracts/diali1/Params.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -1172,86 +1172,6 @@
       "lastModificationDate": 1681203280680,
       "contentHash": "72f6e2776d2c08e817d483da7847d218",
       "sourceName": "contracts/ebc/stakeEbc.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.14"
-      ],
-      "artifacts": [
-        "ERC20",
-        "IERC20",
-        "IERC721",
-        "Math",
-        "Ownable",
-        "SafeMath",
-        "Stake",
-        "stake1"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcTransparentProxy.sol": {
-      "lastModificationDate": 1681204024149,
-      "contentHash": "cef89180b0450bc2d0b327e398391fa3",
-      "sourceName": "contracts/ebcTrans/stakeEbcTransparentProxy.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Foo",
-        "Logic1",
-        "Logic2",
-        "TransparentProxy"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV1.sol": {
-      "lastModificationDate": 1681203280760,
-      "contentHash": "81a7edf0d10d3c87773824dc589a9548",
-      "sourceName": "contracts/ebcTrans/stakeEbcV1.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -2344,6 +2264,203 @@
         "SafeERC20",
         "SafeMath",
         "swap"
+      ]
+    },
+    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\ProxyAdmin.sol": {
+      "lastModificationDate": 1681268288406,
+      "contentHash": "cd67d939554c101bf5ea42316b62408d",
+      "sourceName": "contracts/ebcTrans/ProxyAdmin.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ProxyAdmin"
+      ]
+    },
+    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\ProxyEbc.sol": {
+      "lastModificationDate": 1681268419251,
+      "contentHash": "500f244b36f483d378eab097286eddd7",
+      "sourceName": "contracts/ebcTrans/ProxyEbc.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ProxyEbc"
+      ]
+    },
+    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\Params.sol": {
+      "lastModificationDate": 1681266728014,
+      "contentHash": "a57a05e52c8c31798135191457a3bde0",
+      "sourceName": "contracts/ebcTrans/Params.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Params"
+      ]
+    },
+    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV11.sol": {
+      "lastModificationDate": 1681268531318,
+      "contentHash": "fbf357c86cc6559d01e4db72969ae92c",
+      "sourceName": "contracts/ebcTrans/stakeEbcV11.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "ERC20",
+        "IERC20",
+        "IERC721",
+        "Math",
+        "Ownable",
+        "SafeMath",
+        "StakeEbcV11",
+        "stake1"
+      ]
+    },
+    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV11Ceshi.sol": {
+      "lastModificationDate": 1681270163076,
+      "contentHash": "75c51b9b1bc6f244b6a100aea1acf597",
+      "sourceName": "contracts/ebcTrans/stakeEbcV11Ceshi.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "ERC20",
+        "IERC20",
+        "IERC721",
+        "Math",
+        "Ownable",
+        "SafeMath",
+        "StakeEbcV11",
+        "stake1"
       ]
     }
   }

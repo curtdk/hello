@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.19+commit.7dd6d404"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -64,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ebcTrans/stakeEbcV1.sol": "Ownable"
+			"contracts/ebcTrans/stakeEbcV11.sol": "Ownable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -78,12 +78,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ebcTrans/stakeEbcV1.sol": {
-			"keccak256": "0x952baa58ee5fb1888ab0fdea21d9d42cb2160b2015cbb531bc7df1071c7e8e7d",
+		"contracts/ebcTrans/stakeEbcV11.sol": {
+			"keccak256": "0x0be81a9eeaddcb5f8c4a313be031a0227909180c1bffe9b5ddbf5c1d0c5a4b43",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://52ccda91c357748c32c0abd67988b7a31b57cb7602ce436d4db0d1963d962119",
-				"dweb:/ipfs/QmP9TjVH3rNqDEmMguesFeBRvSqH9j7anoXZu6nUbwWBAD"
+				"bzz-raw://6d3d0c80dd6dd832989a80f4b93317bc2c7a20ff195f9ee33915281c6f96aaf1",
+				"dweb:/ipfs/QmPrBcmpXmgUF7Y1fz2AYxkd2k8rcRcSETrcxTshtMRLJy"
 			]
 		}
 	},

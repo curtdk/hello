@@ -1,13 +1,19 @@
 {
 	"compiler": {
-		"version": "0.8.19+commit.7dd6d404"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "admin",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "_backaddress",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -19,13 +25,51 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "by",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "_backstr",
 				"outputs": [
 					{
-						"internalType": "bytes",
+						"internalType": "string",
 						"name": "",
-						"type": "bytes"
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "_backuint256",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -46,19 +90,6 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "ok",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -104,7 +135,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/DaiLi/updata.sol": "UUPS2"
+			"contracts/daili/uups2.sol": "UUPS2"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -118,12 +149,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/DaiLi/updata.sol": {
-			"keccak256": "0x7d949ab880864c773844a7c2a2ac81d414728d76f119b92908cfbb6cc29af18d",
+		"contracts/daili/uups2.sol": {
+			"keccak256": "0x1fa0466cc8824122822136e7dd0b65e195f4a0d593b8b75110f63b468b3cfb80",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://569477ff9e464d6ade31c1dd3758597f7297dcc22bce7da82d05f1c8da0e23d9",
-				"dweb:/ipfs/QmNQWbj93JD92aGUfn6FjLz4AtDukNEjm3uxy4sbX5CXr9"
+				"bzz-raw://7b5f9ae1a3a032e991f80d83560789fb65cb0f98edb8f041c1c8c4ae65c314c1",
+				"dweb:/ipfs/QmUvF9cUD333vx1dM8bN2sqo83yCFq3Cb1hhsE7z1YfBFh"
 			]
 		}
 	},

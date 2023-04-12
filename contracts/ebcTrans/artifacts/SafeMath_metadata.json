@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.19+commit.7dd6d404"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ebcTrans/stakeEbcV1.sol": "SafeMath"
+			"contracts/ebcTrans/stakeEbcV11Ceshi.sol": "SafeMath"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -32,12 +32,44 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ebcTrans/stakeEbcV1.sol": {
-			"keccak256": "0x952baa58ee5fb1888ab0fdea21d9d42cb2160b2015cbb531bc7df1071c7e8e7d",
+		"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+			"keccak256": "0x247c62047745915c0af6b955470a72d1696ebad4352d7d3011aef1a2463cd888",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://52ccda91c357748c32c0abd67988b7a31b57cb7602ce436d4db0d1963d962119",
-				"dweb:/ipfs/QmP9TjVH3rNqDEmMguesFeBRvSqH9j7anoXZu6nUbwWBAD"
+				"bzz-raw://d7fc8396619de513c96b6e00301b88dd790e83542aab918425633a5f7297a15a",
+				"dweb:/ipfs/QmXbP4kiZyp7guuS7xe8KaybnwkRPGrBc2Kbi3vhcTfpxb"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+			"keccak256": "0x037c334add4b033ad3493038c25be1682d78c00992e1acb0e2795caff3925271",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8a313cf42389440e2706837c91370323b85971c06afd6d056d21e2bc86459618",
+				"dweb:/ipfs/QmT8XUrUvQ9aZaPKrqgRU2JVGWnaxBcUYJA7Q7K5KcLBSZ"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
+			"keccak256": "0x2edcb41c121abc510932e8d83ff8b82cf9cdde35e7c297622f5c29ef0af25183",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://72460c66cd1c3b1c11b863e0d8df0a1c56f37743019e468dc312c754f43e3b06",
+				"dweb:/ipfs/QmPExYKiNb9PUsgktQBupPaM33kzDHxaYoVeJdLhv8s879"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+			"keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+				"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+			]
+		},
+		"contracts/ebcTrans/stakeEbcV11Ceshi.sol": {
+			"keccak256": "0xbb94298a0969b5fdfa500486dea2bb8012469675f3657adba35534aacc102365",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://036bf9ea236fac222fbb3f177adc6c91d4226599d1e5104073cfeb3982730b87",
+				"dweb:/ipfs/QmXPs58Br2gJYmfozwTV5wGjCADEQi5JkEgAeUmuQjsB1n"
 			]
 		}
 	},
