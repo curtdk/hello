@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.13+commit.abaa5c0e"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -243,7 +243,7 @@
 		"compilationTarget": {
 			"contracts/yyi.sol": "IERC20Metadata"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -256,11 +256,11 @@
 	},
 	"sources": {
 		"contracts/yyi.sol": {
-			"keccak256": "0x7e2cad993d67e48fa8270c51999deaa7859ba0d6fac99c34f9af0f702140c83a",
+			"keccak256": "0xec893174523f75f753c794f344c5530f4dd08b07d7abb9410fc8566b849ecada",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://83cdf8175c406e452678e660e7c548cde6640a71a1bfd98982f56820b74e52e1",
-				"dweb:/ipfs/QmVojmZtAAMV7ZedkKEyFGzwBeZFmKDjykrW8wXt3wwmTo"
+				"bzz-raw://93591b2a15d7e833ddd21d3ebfb5fc6e6517961a5f895a4f022189f011581f6c",
+				"dweb:/ipfs/QmPSPX69F25gScTxkf37B1E6TXTKDB9Crpk5ZdHStA4shj"
 			]
 		}
 	},

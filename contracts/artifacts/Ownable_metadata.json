@@ -1,10 +1,15 @@
 {
 	"compiler": {
-		"version": "0.8.19+commit.7dd6d404"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
 			{
 				"anonymous": false,
 				"inputs": [
@@ -49,6 +54,13 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "waiveOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -64,7 +76,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/stake.sol": "Ownable"
+			"contracts/yi.sol": "Ownable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -78,12 +90,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/stake.sol": {
-			"keccak256": "0x339e059c5025fecebb0e7a4ceeb3cee634172757c667f4568de4ecd3123c82e6",
-			"license": "MIT",
+		"contracts/yi.sol": {
+			"keccak256": "0xae8ce821fba95e48c8e1d7dc4ea8907e8728be665d75f0e163aed091b11981f2",
+			"license": "Unlicensed",
 			"urls": [
-				"bzz-raw://0a2247bb6259ad032919f215bc97463c322b41feca54f0257f423c42cd5ce880",
-				"dweb:/ipfs/QmUHE2JKXhcpaAuj3Vrqd7Y3ktXRpD5cq7sJDJvjqnYhiv"
+				"bzz-raw://4361b370c59384dff083b6866c3251a02ada499b6f30ad43fab9248a337b8d57",
+				"dweb:/ipfs/QmbPQn5SHUXWDZ27LbSRAyFjniuLhuTFiFsh73uwogmJZ9"
 			]
 		}
 	},

@@ -249,11 +249,11 @@
 			]
 		},
 		"contracts/ebcTrans/stakeEbcV11Ceshi.sol": {
-			"keccak256": "0xbb94298a0969b5fdfa500486dea2bb8012469675f3657adba35534aacc102365",
+			"keccak256": "0x63b1051524c0ec59b11e4e6da5cca99ca55c596494e4e406d1cc788d4dee478c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://036bf9ea236fac222fbb3f177adc6c91d4226599d1e5104073cfeb3982730b87",
-				"dweb:/ipfs/QmXPs58Br2gJYmfozwTV5wGjCADEQi5JkEgAeUmuQjsB1n"
+				"bzz-raw://ab37c751e99ae653872bbe25a35e32c8e2ea1ec9cf243a588baa18dccc4d59a4",
+				"dweb:/ipfs/QmQo2ZLFDVmWUiRzcMpGGQRfxYhTodFx9kQee5Gzy9KKeF"
 			]
 		}
 	},

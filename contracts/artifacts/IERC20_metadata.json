@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.19+commit.7dd6d404"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -124,45 +124,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "decimals",
-				"outputs": [
-					{
-						"internalType": "uint8",
-						"name": "",
-						"type": "uint8"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "name",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "symbol",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "totalSupply",
 				"outputs": [
 					{
@@ -178,7 +139,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "account",
 						"type": "address"
 					},
 					{
@@ -202,12 +163,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "sender",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -241,7 +202,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/stake.sol": "IERC20"
+			"contracts/yyi.sol": "IERC20"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -255,12 +216,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/stake.sol": {
-			"keccak256": "0x339e059c5025fecebb0e7a4ceeb3cee634172757c667f4568de4ecd3123c82e6",
+		"contracts/yyi.sol": {
+			"keccak256": "0xec893174523f75f753c794f344c5530f4dd08b07d7abb9410fc8566b849ecada",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0a2247bb6259ad032919f215bc97463c322b41feca54f0257f423c42cd5ce880",
-				"dweb:/ipfs/QmUHE2JKXhcpaAuj3Vrqd7Y3ktXRpD5cq7sJDJvjqnYhiv"
+				"bzz-raw://93591b2a15d7e833ddd21d3ebfb5fc6e6517961a5f895a4f022189f011581f6c",
+				"dweb:/ipfs/QmPSPX69F25gScTxkf37B1E6TXTKDB9Crpk5ZdHStA4shj"
 			]
 		}
 	},

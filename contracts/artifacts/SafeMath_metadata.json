@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.13+commit.abaa5c0e"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -18,9 +18,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/swap.sol": "SafeMath"
+			"contracts/yi.sol": "SafeMath"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/swap.sol": {
-			"keccak256": "0x6981846abf8efa503b8aebfdfa935d31dec3a8a4ff41e11b7acaef1e22691df0",
-			"license": "MIT",
+		"contracts/yi.sol": {
+			"keccak256": "0xae8ce821fba95e48c8e1d7dc4ea8907e8728be665d75f0e163aed091b11981f2",
+			"license": "Unlicensed",
 			"urls": [
-				"bzz-raw://20de969d5266c0d8eab32553725e18cacbff83b19a6465293ed229ae50a88ce3",
-				"dweb:/ipfs/QmZYaoNURuFbYtnLpKQmw5RVCyq2fAq4fU1YwKef5TwfkQ"
+				"bzz-raw://4361b370c59384dff083b6866c3251a02ada499b6f30ad43fab9248a337b8d57",
+				"dweb:/ipfs/QmbPQn5SHUXWDZ27LbSRAyFjniuLhuTFiFsh73uwogmJZ9"
 			]
 		}
 	},
