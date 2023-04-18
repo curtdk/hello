@@ -2307,51 +2307,9 @@
       ]
     },
     "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV11.sol": {
-      "lastModificationDate": 1681268531318,
-      "contentHash": "fbf357c86cc6559d01e4db72969ae92c",
+      "lastModificationDate": 1681798453286,
+      "contentHash": "bbfb82d7b52884e1c60667cf76904742",
       "sourceName": "contracts/ebcTrans/stakeEbcV11.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.14"
-      ],
-      "artifacts": [
-        "ERC20",
-        "IERC20",
-        "IERC721",
-        "Math",
-        "Ownable",
-        "SafeMath",
-        "StakeEbcV11",
-        "stake1"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV11Ceshi.sol": {
-      "lastModificationDate": 1681455147613,
-      "contentHash": "49248f65d97e6cb81a0c4850ec63a349",
-      "sourceName": "contracts/ebcTrans/stakeEbcV11Ceshi.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -2388,7 +2346,7 @@
         "IERC721",
         "Math",
         "SafeMath",
-        "StakeEbcV11",
+        "StakeEbcV12",
         "stake1",
         "stake2"
       ]
@@ -2541,6 +2499,93 @@
       ],
       "artifacts": [
         "ProxyEbcStake"
+      ]
+    },
+    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV12.sol": {
+      "lastModificationDate": 1681798427348,
+      "contentHash": "2188ead35d961a7535e97862c5fe6582",
+      "sourceName": "contracts/ebcTrans/stakeEbcV12.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "ERC20",
+        "IERC20",
+        "IERC721",
+        "Math",
+        "SafeMath",
+        "StakeEbcV12",
+        "stake1",
+        "stake2"
+      ]
+    },
+    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV11old.sol": {
+      "lastModificationDate": 1681798444418,
+      "contentHash": "fbf357c86cc6559d01e4db72969ae92c",
+      "sourceName": "contracts/ebcTrans/stakeEbcV11old.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "ERC20",
+        "IERC20",
+        "IERC721",
+        "Math",
+        "Ownable",
+        "SafeMath",
+        "StakeEbcV11",
+        "stake1"
       ]
     }
   }

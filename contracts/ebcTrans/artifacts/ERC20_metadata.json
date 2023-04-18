@@ -202,7 +202,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ebcTrans/stakeEbcV11Ceshi.sol": "ERC20"
+			"contracts/ebcTrans/stakeEbcV12Ceshi.sol": "ERC20"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -248,12 +248,12 @@
 				"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
 			]
 		},
-		"contracts/ebcTrans/stakeEbcV11Ceshi.sol": {
-			"keccak256": "0x76833a9125ca498a1f068df9d3da508cf5b6b2dac3268b37cd1048ea996fd4a9",
+		"contracts/ebcTrans/stakeEbcV12Ceshi.sol": {
+			"keccak256": "0x8f99bde4d0998adb6705eca785b7705c645d223d0122aa9e72d2978d212a42f5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ebd12c8e8b317281add5840a9d6831bedeaf893a156bfdb39fdfb49f035a3282",
-				"dweb:/ipfs/QmSZ5hRFaEWFhoYbzvkuvwM5pPWeh9tMYUFhvhRzaawqcK"
+				"bzz-raw://2e368f202df4f45b57535947e2607ccf0634eae583ca2925d00459ca6b96f051",
+				"dweb:/ipfs/QmdeuEuLozyCbc26XoH933jKUd3CKJiiAGFUFWwcEPqUB5"
 			]
 		}
 	},
