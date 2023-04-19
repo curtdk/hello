@@ -420,6 +420,25 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
     ) public onlyOwner {       
         _userStakeTime[user] = stakeTime;       
     }
+
+          //管理员设置用户状态_userMoonClaimTime
+    function ownerSetUserMoonClaimTime(
+        address user,       
+        uint256 MoonClaimTime
+    ) public onlyOwner {       
+        _userMoonClaimTime[user] = MoonClaimTime;       
+    }
+             //管理员设置用户状态_userMoonClaimNumber
+    function ownerSetUseMoonClaimNumber(
+        address user,       
+        uint256 MoonClaimNumber
+    ) public onlyOwner {       
+        _userMoonClaimNumber[user] = MoonClaimNumber;       
+    }
+
+
+
+
     // //函数内部
     // function lpPrice() public view returns (uint256) {        
     //     // uint256 price=stake1(_lpPriceToken).lpPrice();
@@ -430,44 +449,52 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
      //函数内部 利率 lv
     function TokenPriceLV() public view returns (uint256) {        
         // uint256 price=stake2(_lpPriceTokenNew).getTokenPriceLV(_lpToken);   //8241925389884116 ymii     10000000000000000 usdt 获取 u/ymii=12000..
-        uint256 price=120000000000000000;       
+        uint256 price=1200000000000000000;       
         return price;
     }
 
-//  event ceshi(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
+ event ceshi(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
         // //到期取消质押
     function cancalStack() public {                
-        require( block.timestamp - _userStakeStartTime[msg.sender] >= _userStakeTime[msg.sender],"not time");
-        // emit ceshi(block.timestamp, block.timestamp - _userStakeStartTime[msg.sender], _userStakeTime[msg.sender]);
-        require(_userStake[msg.sender] > 0, "not stake");  
+        require( block.timestamp - _userStakeStartTime[msg.sender] >= _userStakeTime[msg.sender],"not time");        
         require(_userStakeA[msg.sender] > 0, "not StakeA");
         require(_userStakeB[msg.sender] > 0, "not stakeB");
-        require(_userMoonClaimTime[msg.sender]+60 >= _userEndClaimTime[msg.sender], "userMoonClaimTime litte");
-         require(_userMoonClaimNumber[msg.sender] > 5, "userMoonClaimNumber litte");
+        require(_userMoonClaimTime[msg.sender] >= _userEndClaimTime[msg.sender], "userMoonClaimTime litte");
+         require(_userMoonClaimNumber[msg.sender] >= 5, "userMoonClaimNumber litte");
          //最后Moon提取时间大于结束时间
-        IERC20(_rewardToken).transfer(msg.sender, _userStake[msg.sender]);
-        _userStake[msg.sender] = 0;
+
+        uint256 t_rewardTokenNumber=SafeMath.mul(
+                    SafeMath.mul(
+                            SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
+                        TokenPriceLV()),
+                        100);
+        emit ceshi(block.timestamp, t_rewardTokenNumber, 0);
+
+        IERC20(_rewardToken).transfer(msg.sender, t_rewardTokenNumber);
+        // _userStake[msg.sender] = 0;
         _userStakeA[msg.sender] = 0;
         _userStakeB[msg.sender] = 0;
         _userStakeStartTime[msg.sender] = 0;
         _userEndClaimTime[msg.sender] = 0;
         _userStakeTime[msg.sender] = 0;
-        _userPower[msg.sender] = 0;      
+        // _userPower[msg.sender] = 0;      
+        _userMoonClaimTime[msg.sender]=0;
         _userMoonClaimNumber[msg.sender]=0;
             
     }        
         //领取质押收益
     function claimStakeReward() public {
-        require(isClaimStart, "not start");
-        require(_userStake[msg.sender] > 0, "not stake");
+        require(isClaimStart, "ClaimStart flase");
+        // require(_userStake[msg.sender] > 0, "not stake");
         require(_userStakeA[msg.sender] > 0, "not StakeA");
         require(_userStakeB[msg.sender] > 0, "not stakeB");
         require(!_userBlacklist[msg.sender], "user is in blacklist");
-        require(
-            _userLastClaimTime[msg.sender]+ 15 < block.timestamp , //15秒内
-            "already claimed 15 seconds ago"
-        );
+        // require(
+        //     _userLastClaimTime[msg.sender]+ 15 < block.timestamp , //15秒内
+        //     "already claimed 15 seconds ago"
+        // );
         uint256 amount = pureAmountMoon(msg.sender);
+         emit ceshi(block.timestamp, amount, 0);
         //更新领取时间
         _userLastClaimTime[msg.sender] = block.timestamp;
         _userMoonClaimTime[msg.sender] = _userMoonClaimTime[msg.sender]+_stake1;
@@ -475,34 +502,35 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         IERC20(_rewardToken).transfer(msg.sender, amount);
     }
 
+    // event ceshi1(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
      //计算质押收益
     function pureAmountMoon(address user) public view returns (uint256) {
          
         // require(_userStake[msg.sender] > 0, "not stake");
         require(_userStakeA[msg.sender] > 0, "not StakeA");
         require(_userStakeB[msg.sender] > 0, "not stakeB");
-        uint256 t_backUsdt=0;
-         //最后Moon提取时间大于结束时间
-        if (_userMoonClaimTime[user] <= _userEndClaimTime[user]+60) { //moon结束时间 小于 结束时间 结束时间 增加 60秒 可能的延时时间
+        require(_userMoonClaimTime[msg.sender] <= _userEndClaimTime[msg.sender], "userMoonClaimTime biger");//moon结束时间 小于 结束时间 结束时间 增加 60秒 可能的延时时间
+        require(_userMoonClaimNumber[msg.sender] < 5, "userMoonClaimNumber biger");//moon次数 小于5  默认为零
 
-            if (_userMoonClaimNumber[user] <= 5) { //moon次数 小于5  默认为零
-            
-                //如果当前时间大于30天月结时间
-                if (block.timestamp > _userMoonClaimTime[user]) {
-                    //算上个月 30天的账： 价值 每份10u的 对应 的ymii 数量
+        require(block.timestamp > _userMoonClaimTime[user], "block.times  litter");   //如果当前时间大于30天月结时间
+        uint256 t_backUsdt=0;
+         //最后Moon提取时间大于结束时间               
+              
+                    //算上个月 30天的账： 价值 每份10u的 对应 的ymii 数量  1200000000000000000
                     
                     t_backUsdt = SafeMath.mul(
                     SafeMath.mul(
-                            SafeMath.div(_userStakeA[msg.sender],70),
+                            SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
                         TokenPriceLV()),
-                        10);
-
-                    //  emit ymiiFanhuan(amount, t_backUsdt, amountB);
-                }
-            }
-        }
+                        10);                        
+                    //     uint256 t_1=SafeMath.div(_userStakeA[msg.sender],70);
+                    //     uint256 t_2=SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei);                                            
+                    //  emit ceshi(t_1,t_2,TokenPriceLV());
+       
          return t_backUsdt; 
     }
+
+    
      
     //  //计算质押收益
     // function pureAmount(address user) public view returns (uint256) {
@@ -553,51 +581,7 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
             time == _stake1 || time == _stake3 || time == _stake5,
             "not right time"
         );
-        // uint256 amount;
-        // uint256 base;
-        // uint256 _lpPrice;
-        // _lpPrice = lpPrice();
-        //70个amountA 等于一个100U
-        // amount=SafeMath.mul(
-        //     SafeMath.div(amountA,70),100);      
-        // uint256  t_Monthlyearnings=SafeMath.div(SafeMath.div(amount,_wei),10);//得到 10u 每月的倍数100000000000000000000    100000000000000000
-        //  emit ymiiFanhuan(amount, amountA, amountB);
-        //计算质押基数
-        // if (time == _stake1) {
-        //      base = SafeMath.div(
-        //         SafeMath.div(                   
-        //                 SafeMath.mul(
-        //                     SafeMath.mul(TokenPriceLV(), t_Monthlyearnings),
-        //                     _proportion
-        //                 ),
-        //             1000
-        //         ),
-        //         _stake1
-        //     );
-        // } else if (time == _stake3) {
-        //    base = SafeMath.div(
-        //         SafeMath.div(                   
-        //                 SafeMath.mul(
-        //                     SafeMath.mul(TokenPriceLV(), t_Monthlyearnings),
-        //                     _proportion
-        //                 ),
-        //             1000
-        //         ),
-        //         _stake1
-        //     );
-        // } else if (time == _stake5) {      
-        //     base = SafeMath.div(
-        //         SafeMath.div(                   
-        //                 SafeMath.mul(
-        //                     SafeMath.mul(TokenPriceLV(), t_Monthlyearnings),
-        //                     _proportion
-        //                 ),
-        //             1000
-        //         ),
-        //         _stake1
-        //     );
-        // }
-
+       
         // if (inviter != address(0)) {
         //     _inviterMap[msg.sender] = inviter;
         //     _inviterReward[inviter] +=
@@ -606,11 +590,7 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         //     _inviteNum[inviter] += 1;
         // }
 
-        // IERC20(_stakeToken).transferFrom(msg.sender, address(this), amount);
-        // IERC20(_aToken).transferFrom(msg.sender, address(this), amount);
-        // IERC20(_bToken).transferFrom(msg.sender, address(this), amount);
-
-          // IERC20(_stakeToken).transferFrom(msg.sender, address(this), amount);        
+      
         //收 ymii  和 ebc 两分钱
         IERC20(_aToken).transferFrom(msg.sender, address(this), amountA);        
         IERC20(_bToken).transferFrom(msg.sender, address(this), amountB);
@@ -619,18 +599,16 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         IERC20(_bToken).transfer(_adminToken, amountB);
 
         // emit ymiiFanhuan(t_Monthlyearnings, SafeMath.mul(TokenPriceLV(), t_Monthlyearnings), base);
-            //5个月后返还的 ymii数量
-        // uint256  t_DaoQiFanHuanYmii=SafeMath.mul(SafeMath.div(amount,_wei),TokenPriceLV());
-        // _userStakeMonthlyearnings[msg.sender] = t_Monthlyearnings;
-        // _userStake[msg.sender] = amount; //记录 总质押 u
+            //5个月后返还的 ymii数量  
+        uint256 t_blocktime = block.timestamp;
         _userStakeA[msg.sender] = amountA;
         _userStakeB[msg.sender] = amountB;          
-        _userStakeStartTime[msg.sender] = block.timestamp;
-        _userLastClaimTime[msg.sender]= block.timestamp;
-        _userEndClaimTime[msg.sender] = block.timestamp + time;
+        _userStakeStartTime[msg.sender] = t_blocktime;
+        _userLastClaimTime[msg.sender]= t_blocktime;
+        _userEndClaimTime[msg.sender] = t_blocktime + time;
         _userStakeTime[msg.sender] = time;
         // _userPower[msg.sender] = base;
-        _userMoonClaimTime[msg.sender]=block.timestamp+_stake1;//第一次 +30天 月结时间
+        _userMoonClaimTime[msg.sender]=t_blocktime+_stake1;//第一次 +30天 月结时间
         _userMoonClaimNumber[msg.sender]=0;//第一次 默认为零
     }
 }

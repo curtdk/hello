@@ -241,7 +241,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ebcTrans/stakeEbcV12Ceshi.sol": "IERC20"
+			"contracts/ebcTrans/stakeEbcV12.sol": "IERC20"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -287,12 +287,12 @@
 				"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
 			]
 		},
-		"contracts/ebcTrans/stakeEbcV12Ceshi.sol": {
-			"keccak256": "0x8f99bde4d0998adb6705eca785b7705c645d223d0122aa9e72d2978d212a42f5",
+		"contracts/ebcTrans/stakeEbcV12.sol": {
+			"keccak256": "0x976fef5c5f1813c860751b561e125b8e1332b0ac6d686f00c5ec763bbe240da2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2e368f202df4f45b57535947e2607ccf0634eae583ca2925d00459ca6b96f051",
-				"dweb:/ipfs/QmdeuEuLozyCbc26XoH933jKUd3CKJiiAGFUFWwcEPqUB5"
+				"bzz-raw://a739732a3062fc77cde989809c7e310b4f60f77ae5efe1234a8ab5904848b69f",
+				"dweb:/ipfs/QmY2mNbPmCyDu9sTZTmVomjmC1bWshGiXhSpzTnAw74X2V"
 			]
 		}
 	},
