@@ -448,8 +448,8 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
     // }
      //函数内部 利率 lv
     function TokenPriceLV() public view returns (uint256) {        
-        // uint256 price=stake2(_lpPriceTokenNew).getTokenPriceLV(_lpToken);   //8241925389884116 ymii     10000000000000000 usdt 获取 u/ymii=12000..
-        uint256 price=1200000000000000000;       
+        uint256 price=stake2(_lpPriceTokenNew).getTokenPriceLV(_lpToken);   //8241925389884116 ymii     10000000000000000 usdt 获取 u/ymii=12000..
+        // uint256 price=1200000000000000000;       
         return price;
     }
 
