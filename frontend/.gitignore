@@ -3,8 +3,8 @@
 src/contracts
 
 # dependencies
-/node_modules
-!/node_modules/@openzeppelin
+# /node_modules
+
 /.pnp
 .pnp.js
 
