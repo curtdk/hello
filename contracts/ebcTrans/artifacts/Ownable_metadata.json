@@ -64,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ebcTrans/stakeEbcV11.sol": "Ownable"
+			"contracts/ebcTrans/stakeEbcV11old.sol": "Ownable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -78,7 +78,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ebcTrans/stakeEbcV11.sol": {
+		"contracts/ebcTrans/stakeEbcV11old.sol": {
 			"keccak256": "0x0be81a9eeaddcb5f8c4a313be031a0227909180c1bffe9b5ddbf5c1d0c5a4b43",
 			"license": "MIT",
 			"urls": [

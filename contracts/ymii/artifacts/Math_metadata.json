@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ymii/stake2Price.sol": "Math"
+			"contracts/ymii/stake2.sol": "Math"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ymii/stake2Price.sol": {
-			"keccak256": "0x43b53fb7b5e8c68bc5ee6e5fa18c704dc2d17a648f4067f0d769d44853f4f012",
+		"contracts/ymii/stake2.sol": {
+			"keccak256": "0x964297f8bc5df05fdb5dc37ad09a0852a6627893e0f687781b8e478c3cdd693f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0fa1bf9ca2bb71af05042a6e9bdfe5984c02a0321a67a9add77bccc9f5478d8b",
-				"dweb:/ipfs/QmdBknWeBu9Pdtu1rmcdQxw2Wf7cmXuTKbxHmW4BSpEeFw"
+				"bzz-raw://f642844424d09616d8295c4dffddc6533a0279898d3b0227887d1753f0e99575",
+				"dweb:/ipfs/QmUqH5LuEXpaApUZaX1Ey1tQR2CAxUc8hjEfssUoZdX2pK"
 			]
 		}
 	},

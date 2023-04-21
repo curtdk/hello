@@ -202,7 +202,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ebcTrans/stakeEbcV12.sol": "ERC20"
+			"contracts/ebcTrans/stakeEbcV11old.sol": "ERC20"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -216,44 +216,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
-			"keccak256": "0x247c62047745915c0af6b955470a72d1696ebad4352d7d3011aef1a2463cd888",
+		"contracts/ebcTrans/stakeEbcV11old.sol": {
+			"keccak256": "0x0be81a9eeaddcb5f8c4a313be031a0227909180c1bffe9b5ddbf5c1d0c5a4b43",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d7fc8396619de513c96b6e00301b88dd790e83542aab918425633a5f7297a15a",
-				"dweb:/ipfs/QmXbP4kiZyp7guuS7xe8KaybnwkRPGrBc2Kbi3vhcTfpxb"
-			]
-		},
-		"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
-			"keccak256": "0x037c334add4b033ad3493038c25be1682d78c00992e1acb0e2795caff3925271",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://8a313cf42389440e2706837c91370323b85971c06afd6d056d21e2bc86459618",
-				"dweb:/ipfs/QmT8XUrUvQ9aZaPKrqgRU2JVGWnaxBcUYJA7Q7K5KcLBSZ"
-			]
-		},
-		"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
-			"keccak256": "0x2edcb41c121abc510932e8d83ff8b82cf9cdde35e7c297622f5c29ef0af25183",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://72460c66cd1c3b1c11b863e0d8df0a1c56f37743019e468dc312c754f43e3b06",
-				"dweb:/ipfs/QmPExYKiNb9PUsgktQBupPaM33kzDHxaYoVeJdLhv8s879"
-			]
-		},
-		"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
-			"keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
-				"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
-			]
-		},
-		"contracts/ebcTrans/stakeEbcV12.sol": {
-			"keccak256": "0x1c46c7f56883da152629f2387e80b01b309ae231092343a583038aa159f5f1d4",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://3c9274462463e9f05058e635615747ef9b4852f2c36583631a300ab304ee0a9e",
-				"dweb:/ipfs/QmWYTbyN6kM4DejsA2ajopd4Nif73YKguCn5L7vrMJDyjp"
+				"bzz-raw://6d3d0c80dd6dd832989a80f4b93317bc2c7a20ff195f9ee33915281c6f96aaf1",
+				"dweb:/ipfs/QmPrBcmpXmgUF7Y1fz2AYxkd2k8rcRcSETrcxTshtMRLJy"
 			]
 		}
 	},
