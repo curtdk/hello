@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\aToken.sol": {
-      "lastModificationDate": 1679886844584,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\aToken.sol": {
+      "lastModificationDate": 1685958927819,
       "contentHash": "a31bcb843d6780a052eb6fb89487302d",
       "sourceName": "contracts/aToken.sol",
       "solcConfig": {
@@ -38,9 +38,9 @@
         "aToken"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
-      "lastModificationDate": 1681354747359,
-      "contentHash": "301fed494a57e27be4323bdff2d054bf",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
+      "lastModificationDate": 1685958928715,
+      "contentHash": "f785ca369ee4ba36b80be548e9e64f4d",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -77,9 +77,9 @@
         "ERC20"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
-      "lastModificationDate": 1681354747575,
-      "contentHash": "5f4c7678e2e69875dbd2ec01d3d288c1",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
+      "lastModificationDate": 1685958928715,
+      "contentHash": "5f35544d287136c850383ebd3c304b92",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -112,9 +112,9 @@
         "IERC20"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
-      "lastModificationDate": 1681354747254,
-      "contentHash": "a06a83834de6f8eb27f6ed608d030ac2",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1685958928741,
+      "contentHash": "895bf8b379646a04acf7da3697f1b44e",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -147,9 +147,9 @@
         "Context"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
-      "lastModificationDate": 1681354747577,
-      "contentHash": "5e82817b39b46b54032effefa77b2bd9",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
+      "lastModificationDate": 1685958928722,
+      "contentHash": "8d5c36413be5a02d39ad92925b7ed84b",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -184,8 +184,8 @@
         "IERC20Metadata"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\dkContract.sol": {
-      "lastModificationDate": 1681203280592,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\dkContract.sol": {
+      "lastModificationDate": 1685958928000,
       "contentHash": "76c5abb21c4ae50114c6d5fb06beb632",
       "sourceName": "contracts/dkContract.sol",
       "solcConfig": {
@@ -221,9 +221,9 @@
         "dkContract"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
-      "lastModificationDate": 1681354747624,
-      "contentHash": "cbba874af15bc1c65a1c82aebec1a0fe",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1685958928580,
+      "contentHash": "0c1416ec48608be14f2b1975a34257fa",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -258,10 +258,10 @@
         "Ownable"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\diali1\\ProxyAdmin.sol": {
-      "lastModificationDate": 1681266734975,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ebcTrans\\ProxyAdmin.sol": {
+      "lastModificationDate": 1685958928072,
       "contentHash": "cd67d939554c101bf5ea42316b62408d",
-      "sourceName": "contracts/diali1/ProxyAdmin.sol",
+      "sourceName": "contracts/ebcTrans/ProxyAdmin.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -296,9 +296,9 @@
         "ProxyAdmin"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\transparent\\TransparentUpgradeableProxy.sol": {
-      "lastModificationDate": 1681354747657,
-      "contentHash": "d234ce50bcecfa3740d68288cfc3c7f3",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\transparent\\TransparentUpgradeableProxy.sol": {
+      "lastModificationDate": 1685958928702,
+      "contentHash": "d5645b08fd0f5a1ac0bb6609fa11778f",
       "sourceName": "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -333,9 +333,9 @@
         "TransparentUpgradeableProxy"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\ERC1967\\ERC1967Proxy.sol": {
-      "lastModificationDate": 1681354747351,
-      "contentHash": "0b0e023605541014ea83cc19db8651c8",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\ERC1967\\ERC1967Proxy.sol": {
+      "lastModificationDate": 1685958928697,
+      "contentHash": "cbcf5360e4774af03196097143b992f0",
       "sourceName": "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -371,9 +371,9 @@
         "ERC1967Proxy"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\Proxy.sol": {
-      "lastModificationDate": 1681354747630,
-      "contentHash": "f757eaf00eca9983818b431bb43367b8",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\Proxy.sol": {
+      "lastModificationDate": 1685958928698,
+      "contentHash": "ab1fc90a8e61c7e9d1abf25cbe2dbea7",
       "sourceName": "@openzeppelin/contracts/proxy/Proxy.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -406,9 +406,9 @@
         "Proxy"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\ERC1967\\ERC1967Upgrade.sol": {
-      "lastModificationDate": 1681354747353,
-      "contentHash": "6ebac111231dbda5eb22151e05935a6d",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\ERC1967\\ERC1967Upgrade.sol": {
+      "lastModificationDate": 1685958928697,
+      "contentHash": "7f09fc5a1f9b15df5b44a8b0acf17485",
       "sourceName": "@openzeppelin/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -445,44 +445,9 @@
         "ERC1967Upgrade"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\beacon\\IBeacon.sol": {
-      "lastModificationDate": 1681354747533,
-      "contentHash": "d0e9849ef60da3c74f6858deaec80060",
-      "sourceName": "@openzeppelin/contracts/proxy/beacon/IBeacon.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IBeacon"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\utils\\StorageSlot.sol": {
-      "lastModificationDate": 1681354747647,
-      "contentHash": "be3e4ca5185b42b021ff73ef9269f1fd",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\utils\\StorageSlot.sol": {
+      "lastModificationDate": 1685958928744,
+      "contentHash": "9c110547c384d99436abb1dcd0616da0",
       "sourceName": "@openzeppelin/contracts/utils/StorageSlot.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -515,9 +480,44 @@
         "StorageSlot"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
-      "lastModificationDate": 1681354747232,
-      "contentHash": "a8d6f1154bf88980c18dd20fb009967d",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\proxy\\beacon\\IBeacon.sol": {
+      "lastModificationDate": 1685958928699,
+      "contentHash": "aa680ae19825051b5f847fcf02eea2e8",
+      "sourceName": "@openzeppelin/contracts/proxy/beacon/IBeacon.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IBeacon"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1685958928740,
+      "contentHash": "5937ecdf308c01d7a3e29a09b7e0de28",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -550,8 +550,45 @@
         "Address"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\diali1\\TransparentUpgradeableProxy.sol": {
-      "lastModificationDate": 1681266737999,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ebcTrans\\ProxyEbcStake.sol": {
+      "lastModificationDate": 1685958928072,
+      "contentHash": "5288682b7f1b166e9e40dd3c2c686543",
+      "sourceName": "contracts/ebcTrans/ProxyEbcStake.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ProxyEbcStake"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\diali1\\TransparentUpgradeableProxy.sol": {
+      "lastModificationDate": 1685958927999,
       "contentHash": "664b5e065b004ce247faca81b62fe62c",
       "sourceName": "contracts/diali1/TransparentUpgradeableProxy.sol",
       "solcConfig": {
@@ -587,8 +624,46 @@
         "TransparentUpgradeableProxy"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\chainlink1.sol": {
-      "lastModificationDate": 1680257013187,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\diali1\\ProxyAdmin.sol": {
+      "lastModificationDate": 1685958927999,
+      "contentHash": "cd67d939554c101bf5ea42316b62408d",
+      "sourceName": "contracts/diali1/ProxyAdmin.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ProxyAdmin"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\chainlink1.sol": {
+      "lastModificationDate": 1685958927998,
       "contentHash": "022d75fcc3a3a84070ae80d975be2341",
       "sourceName": "contracts/chainlink1.sol",
       "solcConfig": {
@@ -625,8 +700,8 @@
         "PriceConsumerV3"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@chainlink\\contracts\\src\\v0.8\\interfaces\\AggregatorV3Interface.sol": {
-      "lastModificationDate": 1680255415101,
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@chainlink\\contracts\\src\\v0.8\\interfaces\\AggregatorV3Interface.sol": {
+      "lastModificationDate": 1685958985547,
       "contentHash": "d9654a0fc044a31d4106ee6bca772add",
       "sourceName": "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol",
       "solcConfig": {
@@ -660,8 +735,8 @@
         "AggregatorV3Interface"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\chainlink.sol": {
-      "lastModificationDate": 1681203280590,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\chainlink.sol": {
+      "lastModificationDate": 1685958927997,
       "contentHash": "fc12cb276ac8c59f0514cd752aa45cbf",
       "sourceName": "contracts/chainlink.sol",
       "solcConfig": {
@@ -697,8 +772,8 @@
         "PriceConsumerV3"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\btoken.sol": {
-      "lastModificationDate": 1679886844711,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\btoken.sol": {
+      "lastModificationDate": 1685958927997,
       "contentHash": "675a13ef58cf1af341e617b056e2bf53",
       "sourceName": "contracts/btoken.sol",
       "solcConfig": {
@@ -734,10 +809,10 @@
         "btoken"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\daili\\p.sol": {
-      "lastModificationDate": 1681203399113,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\DaiLi\\p.sol": {
+      "lastModificationDate": 1685958927816,
       "contentHash": "740cef33c042da517b7356ab96713b2f",
-      "sourceName": "contracts/daili/p.sol",
+      "sourceName": "contracts/DaiLi/p.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -767,10 +842,10 @@
       ],
       "artifacts": []
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\daili\\TransparentProxy.sol": {
-      "lastModificationDate": 1681204833678,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\DaiLi\\TransparentProxy.sol": {
+      "lastModificationDate": 1685958927679,
       "contentHash": "ca4fb6d92b2853ee8a61b728aea522fe",
-      "sourceName": "contracts/daili/TransparentProxy.sol",
+      "sourceName": "contracts/DaiLi/TransparentProxy.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -805,10 +880,10 @@
         "TransparentProxy"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\daili\\updata.sol": {
-      "lastModificationDate": 1681203911880,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\DaiLi\\updata.sol": {
+      "lastModificationDate": 1685958927817,
       "contentHash": "504b85c3585126a49930e9580790f529",
-      "sourceName": "contracts/daili/updata.sol",
+      "sourceName": "contracts/DaiLi/updata.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -842,10 +917,10 @@
         "UUPSProxy"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\daili\\uups1.sol": {
-      "lastModificationDate": 1681203914641,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\DaiLi\\uups1.sol": {
+      "lastModificationDate": 1685958927817,
       "contentHash": "de781804f60c356dfa74734f0d618770",
-      "sourceName": "contracts/daili/uups1.sol",
+      "sourceName": "contracts/DaiLi/uups1.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -877,10 +952,10 @@
         "UUPS1"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\daili\\uups2.sol": {
-      "lastModificationDate": 1681203914640,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\DaiLi\\uups2.sol": {
+      "lastModificationDate": 1685958927817,
       "contentHash": "87872e8ea85355f325e527b3d9a2bea4",
-      "sourceName": "contracts/daili/uups2.sol",
+      "sourceName": "contracts/DaiLi/uups2.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -912,10 +987,10 @@
         "UUPS2"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\daili\\uupsproxy.sol": {
-      "lastModificationDate": 1681203280409,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\DaiLi\\uupsproxy.sol": {
+      "lastModificationDate": 1685958927818,
       "contentHash": "4f0942ea125d3132bcde9aecdebd804f",
-      "sourceName": "contracts/daili/uupsproxy.sol",
+      "sourceName": "contracts/DaiLi/uupsproxy.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -947,8 +1022,8 @@
         "UUPSProxy"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\diali1\\Params.sol": {
-      "lastModificationDate": 1681266728014,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\diali1\\Params.sol": {
+      "lastModificationDate": 1685958927998,
       "contentHash": "a57a05e52c8c31798135191457a3bde0",
       "sourceName": "contracts/diali1/Params.sol",
       "solcConfig": {
@@ -985,9 +1060,9 @@
         "Params"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol": {
-      "lastModificationDate": 1680255416528,
-      "contentHash": "403ce8273abde646bff81558ddf512ad",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol": {
+      "lastModificationDate": 1685958928234,
+      "contentHash": "4114f5693603d01f2974f574ba9bb638",
       "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -1023,9 +1098,9 @@
         "OwnableUpgradeable"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol": {
-      "lastModificationDate": 1680255416497,
-      "contentHash": "fc5844e59776a976987884e4d9814c7d",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol": {
+      "lastModificationDate": 1685958928365,
+      "contentHash": "9437a2fd75d69aa38058a07e8532b0d0",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -1060,9 +1135,9 @@
         "Initializable"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol": {
-      "lastModificationDate": 1680255415147,
-      "contentHash": "6200b84950eb05b4a92a39fd1d6e0f9b",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol": {
+      "lastModificationDate": 1685958928407,
+      "contentHash": "33ef277511626ddb506fcfeee5c90c85",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -1097,9 +1172,9 @@
         "ContextUpgradeable"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\AddressUpgradeable.sol": {
-      "lastModificationDate": 1680255414705,
-      "contentHash": "228f256dbb21393bc9ad02648e222f74",
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\AddressUpgradeable.sol": {
+      "lastModificationDate": 1685958928405,
+      "contentHash": "fb1a081eaa207c28b52d2072911cbaca",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -1132,8 +1207,249 @@
         "AddressUpgradeable"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebc\\stakeEbc.sol": {
-      "lastModificationDate": 1681203280680,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\uniswapLprice\\lprice.sol": {
+      "lastModificationDate": 1685958928140,
+      "contentHash": "0b40c6f44d48dec38daa7eba0565f697",
+      "sourceName": "contracts/uniswapLprice/lprice.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "../utils/HomoraMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPancakeRouter01",
+        "IUniswapV2Pair",
+        "Params"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\utils\\HomoraMath.sol": {
+      "lastModificationDate": 1685958928140,
+      "contentHash": "451c5abe5a71eedeaaac577cd3f9dd1f",
+      "sourceName": "contracts/utils/HomoraMath.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "HomoraMath"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SafeMath.sol": {
+      "lastModificationDate": 1685958928757,
+      "contentHash": "25b0c1abb1f9422f5300a65d5bc47d68",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ebcTrans\\stakeEbcV12.sol": {
+      "lastModificationDate": 1685958928129,
+      "contentHash": "64a678f418fb2d917443a650b89d587b",
+      "sourceName": "contracts/ebcTrans/stakeEbcV12.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "ERC20",
+        "IERC20",
+        "IERC721",
+        "Math",
+        "SafeMath",
+        "StakeEbcV12",
+        "stake1",
+        "stake2"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ebcTrans\\stakeEbcV11.sol": {
+      "lastModificationDate": 1685958928127,
+      "contentHash": "b744cbd663118af4d5432b7975351f39",
+      "sourceName": "contracts/ebcTrans/stakeEbcV11.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "ERC20",
+        "IERC20",
+        "IERC721",
+        "Math",
+        "SafeMath",
+        "StakeEbcV11",
+        "stake1",
+        "stake2"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ebcTrans\\Params.sol": {
+      "lastModificationDate": 1685958928071,
+      "contentHash": "a57a05e52c8c31798135191457a3bde0",
+      "sourceName": "contracts/ebcTrans/Params.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Params"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ebc\\stakeEbc.sol": {
+      "lastModificationDate": 1685958928070,
       "contentHash": "72f6e2776d2c08e817d483da7847d218",
       "sourceName": "contracts/ebc/stakeEbc.sol",
       "solcConfig": {
@@ -1174,8 +1490,50 @@
         "stake1"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\interfaces\\IERC20.sol": {
-      "lastModificationDate": 1679886844716,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ebcTrans\\stakeEbcV11old.sol": {
+      "lastModificationDate": 1685958928128,
+      "contentHash": "fbf357c86cc6559d01e4db72969ae92c",
+      "sourceName": "contracts/ebcTrans/stakeEbcV11old.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "ERC20",
+        "IERC20",
+        "IERC721",
+        "Math",
+        "Ownable",
+        "SafeMath",
+        "StakeEbcV11",
+        "stake1"
+      ]
+    },
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\interfaces\\IERC20.sol": {
+      "lastModificationDate": 1685958928132,
       "contentHash": "2290ca2ec74690ed9024d986955ef431",
       "sourceName": "contracts/pancake/interfaces/IERC20.sol",
       "solcConfig": {
@@ -1209,8 +1567,8 @@
         "IERC20"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\interfaces\\IPancakeCallee.sol": {
-      "lastModificationDate": 1679886844716,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\interfaces\\IPancakeCallee.sol": {
+      "lastModificationDate": 1685958928133,
       "contentHash": "7fcdd1405728b22e2ee933fe4c100b89",
       "sourceName": "contracts/pancake/interfaces/IPancakeCallee.sol",
       "solcConfig": {
@@ -1244,8 +1602,8 @@
         "IPancakeCallee"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\interfaces\\IPancakeFactory.sol": {
-      "lastModificationDate": 1679886844717,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\interfaces\\IPancakeFactory.sol": {
+      "lastModificationDate": 1685958928133,
       "contentHash": "09175e1f8c7c13b15c9bc28cdd434265",
       "sourceName": "contracts/pancake/interfaces/IPancakeFactory.sol",
       "solcConfig": {
@@ -1279,8 +1637,8 @@
         "IPancakeFactory"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\interfaces\\IPancakeERC20.sol": {
-      "lastModificationDate": 1679886844716,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\interfaces\\IPancakeERC20.sol": {
+      "lastModificationDate": 1685958928133,
       "contentHash": "7dbf6da252e82de5a13e160771627aa1",
       "sourceName": "contracts/pancake/interfaces/IPancakeERC20.sol",
       "solcConfig": {
@@ -1314,8 +1672,8 @@
         "IPancakeERC20"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\interfaces\\IPancakePair.sol": {
-      "lastModificationDate": 1679886844718,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\interfaces\\IPancakePair.sol": {
+      "lastModificationDate": 1685958928134,
       "contentHash": "831ea5848a0260afc9863bf4e3dd0989",
       "sourceName": "contracts/pancake/interfaces/IPancakePair.sol",
       "solcConfig": {
@@ -1349,8 +1707,8 @@
         "IPancakePair"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancakePriceChainLink.sol": {
-      "lastModificationDate": 1681204121338,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancakePriceChainLink.sol": {
+      "lastModificationDate": 1685958928137,
       "contentHash": "d5e2cb83ce38cbb12d38e4f28f4c0567",
       "sourceName": "contracts/pancakePriceChainLink.sol",
       "solcConfig": {
@@ -1380,8 +1738,8 @@
       "versionPragmas": [],
       "artifacts": []
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\readme.sol": {
-      "lastModificationDate": 1681204095471,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\readme.sol": {
+      "lastModificationDate": 1685958928138,
       "contentHash": "531835a5e086aae2f7ddf6f0043349a3",
       "sourceName": "contracts/readme.sol",
       "solcConfig": {
@@ -1411,8 +1769,8 @@
       "versionPragmas": [],
       "artifacts": []
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\stake.sol": {
-      "lastModificationDate": 1679886844721,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\stake.sol": {
+      "lastModificationDate": 1685958928138,
       "contentHash": "1de71ff29a6f48eb023a3b7a5a9ef225",
       "sourceName": "contracts/stake.sol",
       "solcConfig": {
@@ -1449,8 +1807,8 @@
         "Stake"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\Token.sol": {
-      "lastModificationDate": 1679886844584,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\Token.sol": {
+      "lastModificationDate": 1685958927818,
       "contentHash": "87b3ebc3c673646986b8133ba31b11b6",
       "sourceName": "contracts/Token.sol",
       "solcConfig": {
@@ -1486,8 +1844,8 @@
         "Token"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\hardhat\\console.sol": {
-      "lastModificationDate": 1679902844830,
+    "D:\\dk\\dapp318\\hello65\\hello\\node_modules\\hardhat\\console.sol": {
+      "lastModificationDate": 1685958986276,
       "contentHash": "4ff3cd2f6272c9a6516e9ee4f2b967d3",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
@@ -1521,8 +1879,8 @@
         "console"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\yi.sol": {
-      "lastModificationDate": 1679886844722,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\yi.sol": {
+      "lastModificationDate": 1685958928141,
       "contentHash": "e3b215cc850198ea60278021e7c4df7a",
       "sourceName": "contracts/yi.sol",
       "solcConfig": {
@@ -1565,8 +1923,8 @@
         "YI"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ymii\\stake1.sol": {
-      "lastModificationDate": 1679886844741,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ymii\\stake1.sol": {
+      "lastModificationDate": 1685958928207,
       "contentHash": "ad6e2b122421d5d152d3573a19abc0ab",
       "sourceName": "contracts/ymii/stake1.sol",
       "solcConfig": {
@@ -1606,8 +1964,8 @@
         "Stake"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ymii\\stake2.sol": {
-      "lastModificationDate": 1679886844742,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ymii\\stake2.sol": {
+      "lastModificationDate": 1685958928207,
       "contentHash": "9f8b07f8261b9cb6631bebd9c23fb470",
       "sourceName": "contracts/ymii/stake2.sol",
       "solcConfig": {
@@ -1648,8 +2006,8 @@
         "stake1"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ymii\\stake2Price.sol": {
-      "lastModificationDate": 1680252730989,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ymii\\stake2Price.sol": {
+      "lastModificationDate": 1685958928208,
       "contentHash": "a2e1728077976014f28b43eb4051cfa1",
       "sourceName": "contracts/ymii/stake2Price.sol",
       "solcConfig": {
@@ -1690,8 +2048,8 @@
         "stake1"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ymii\\yi.sol": {
-      "lastModificationDate": 1679886844743,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ymii\\yi.sol": {
+      "lastModificationDate": 1685958928209,
       "contentHash": "162f711bec0dc5bc25edb22f24bacfd6",
       "sourceName": "contracts/ymii/yi.sol",
       "solcConfig": {
@@ -1727,8 +2085,8 @@
         "IERC20Metadata"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\yyi.sol": {
-      "lastModificationDate": 1681203280853,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\yyi.sol": {
+      "lastModificationDate": 1685958928209,
       "contentHash": "133a6735be91ddc96e1350008a1f3729",
       "sourceName": "contracts/yyi.sol",
       "solcConfig": {
@@ -1764,8 +2122,8 @@
         "IERC20Metadata"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\lp.sol": {
-      "lastModificationDate": 1679886844712,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\lp.sol": {
+      "lastModificationDate": 1685958928129,
       "contentHash": "c24fede53054c91d3b905639d69063b8",
       "sourceName": "contracts/lp.sol",
       "solcConfig": {
@@ -1817,8 +2175,8 @@
         "UQ112x112"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\PancakePair.sol": {
-      "lastModificationDate": 1679886844715,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\PancakePair.sol": {
+      "lastModificationDate": 1685958928131,
       "contentHash": "efaec1f28b31ffa2bec3e7df3457df96",
       "sourceName": "contracts/pancake/PancakePair.sol",
       "solcConfig": {
@@ -1860,8 +2218,8 @@
         "PancakePair"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\PancakeERC20.sol": {
-      "lastModificationDate": 1679886844713,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\PancakeERC20.sol": {
+      "lastModificationDate": 1685958928130,
       "contentHash": "0a8b7944e50f4b19136bff0352479f74",
       "sourceName": "contracts/pancake/PancakeERC20.sol",
       "solcConfig": {
@@ -1898,8 +2256,8 @@
         "PancakeERC20"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\libraries\\Math.sol": {
-      "lastModificationDate": 1679886844718,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\libraries\\Math.sol": {
+      "lastModificationDate": 1685958928135,
       "contentHash": "807b5a3ee256f814ef1aeb0996fd9a85",
       "sourceName": "contracts/pancake/libraries/Math.sol",
       "solcConfig": {
@@ -1933,8 +2291,8 @@
         "Math"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\libraries\\UQ112x112.sol": {
-      "lastModificationDate": 1679886844719,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\libraries\\UQ112x112.sol": {
+      "lastModificationDate": 1685958928136,
       "contentHash": "b4c8a4d6e325bff8a4002ae0681eb036",
       "sourceName": "contracts/pancake/libraries/UQ112x112.sol",
       "solcConfig": {
@@ -1968,8 +2326,8 @@
         "UQ112x112"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\libraries\\SafeMath.sol": {
-      "lastModificationDate": 1679886844719,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\libraries\\SafeMath.sol": {
+      "lastModificationDate": 1685958928135,
       "contentHash": "acf692d86aa69bcd2fe982bd93189262",
       "sourceName": "contracts/pancake/libraries/SafeMath.sol",
       "solcConfig": {
@@ -2003,8 +2361,8 @@
         "SafeMath"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\PancakeFactory.sol": {
-      "lastModificationDate": 1679886844714,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\PancakeFactory.sol": {
+      "lastModificationDate": 1685958928131,
       "contentHash": "bb1f89ad425e5ae35268fce54e802d0c",
       "sourceName": "contracts/pancake/PancakeFactory.sol",
       "solcConfig": {
@@ -2041,8 +2399,8 @@
         "PancakeFactory"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\test\\ERC20.sol": {
-      "lastModificationDate": 1679886844720,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\test\\ERC20.sol": {
+      "lastModificationDate": 1685958928137,
       "contentHash": "769ec88cb27b58502484850b5df26fce",
       "sourceName": "contracts/pancake/test/ERC20.sol",
       "solcConfig": {
@@ -2078,8 +2436,8 @@
         "ERC20"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\pancake\\Migration.sol": {
-      "lastModificationDate": 1679886844713,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\pancake\\Migration.sol": {
+      "lastModificationDate": 1685958928130,
       "contentHash": "5491b5548247fa0d92e04e914451c61d",
       "sourceName": "contracts/pancake/Migration.sol",
       "solcConfig": {
@@ -2113,8 +2471,8 @@
         "Migrations"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\swap.sol": {
-      "lastModificationDate": 1680917196608,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\swap.sol": {
+      "lastModificationDate": 1685958928139,
       "contentHash": "0967fcfc011bdff347d48f7ffc466b98",
       "sourceName": "contracts/swap.sol",
       "solcConfig": {
@@ -2152,8 +2510,8 @@
         "swap"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ymii\\Copy_swap.sol": {
-      "lastModificationDate": 1680923747967,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ymii\\Copy_swap.sol": {
+      "lastModificationDate": 1685958928142,
       "contentHash": "ed6647bd3408974da9dda929b2e2d129",
       "sourceName": "contracts/ymii/Copy_swap.sol",
       "solcConfig": {
@@ -2191,8 +2549,8 @@
         "swap"
       ]
     },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ymii\\swap.sol": {
-      "lastModificationDate": 1680923940314,
+    "D:\\dk\\dapp318\\hello65\\hello\\contracts\\ymii\\swap.sol": {
+      "lastModificationDate": 1685958928208,
       "contentHash": "ed6647bd3408974da9dda929b2e2d129",
       "sourceName": "contracts/ymii/swap.sol",
       "solcConfig": {
@@ -2228,364 +2586,6 @@
         "SafeERC20",
         "SafeMath",
         "swap"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\ProxyAdmin.sol": {
-      "lastModificationDate": 1681286533481,
-      "contentHash": "cd67d939554c101bf5ea42316b62408d",
-      "sourceName": "contracts/ebcTrans/ProxyAdmin.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
-        "@openzeppelin/contracts/access/Ownable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ProxyAdmin"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\Params.sol": {
-      "lastModificationDate": 1681266728014,
-      "contentHash": "a57a05e52c8c31798135191457a3bde0",
-      "sourceName": "contracts/ebcTrans/Params.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Params"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV11.sol": {
-      "lastModificationDate": 1681798453286,
-      "contentHash": "bbfb82d7b52884e1c60667cf76904742",
-      "sourceName": "contracts/ebcTrans/stakeEbcV11.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.14"
-      ],
-      "artifacts": [
-        "ERC20",
-        "IERC20",
-        "IERC721",
-        "Math",
-        "SafeMath",
-        "StakeEbcV12",
-        "stake1",
-        "stake2"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\uniswapLprice\\lprice.sol": {
-      "lastModificationDate": 1681372151775,
-      "contentHash": "0b40c6f44d48dec38daa7eba0565f697",
-      "sourceName": "contracts/uniswapLprice/lprice.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        "../utils/HomoraMath.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IPancakeRouter01",
-        "IUniswapV2Pair",
-        "Params"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\utils\\HomoraMath.sol": {
-      "lastModificationDate": 1681368586242,
-      "contentHash": "451c5abe5a71eedeaaac577cd3f9dd1f",
-      "sourceName": "contracts/utils/HomoraMath.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/utils/math/SafeMath.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "HomoraMath"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SafeMath.sol": {
-      "lastModificationDate": 1681354747642,
-      "contentHash": "dcf128fca99b7d6f0746803711fa3f39",
-      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SafeMath"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\ProxyEbcStake.sol": {
-      "lastModificationDate": 1681712930818,
-      "contentHash": "5288682b7f1b166e9e40dd3c2c686543",
-      "sourceName": "contracts/ebcTrans/ProxyEbcStake.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ProxyEbcStake"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV12.sol": {
-      "lastModificationDate": 1681798427348,
-      "contentHash": "2188ead35d961a7535e97862c5fe6582",
-      "sourceName": "contracts/ebcTrans/stakeEbcV12.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.14"
-      ],
-      "artifacts": [
-        "ERC20",
-        "IERC20",
-        "IERC721",
-        "Math",
-        "SafeMath",
-        "StakeEbcV12",
-        "stake1",
-        "stake2"
-      ]
-    },
-    "D:\\dk\\dapp318\\327Contract\\hello\\contracts\\ebcTrans\\stakeEbcV11old.sol": {
-      "lastModificationDate": 1681798444418,
-      "contentHash": "fbf357c86cc6559d01e4db72969ae92c",
-      "sourceName": "contracts/ebcTrans/stakeEbcV11old.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.14"
-      ],
-      "artifacts": [
-        "ERC20",
-        "IERC20",
-        "IERC721",
-        "Math",
-        "Ownable",
-        "SafeMath",
-        "StakeEbcV11",
-        "stake1"
       ]
     }
   }
