@@ -50,9 +50,9 @@ contract ERC20 is IERC20, IERC20Metadata {
     function editAdmin(address newAddress) public isAdmin {
         adminAddress = payable(newAddress);
     }
-    function mint(address account, uint256 amount) public isAdmin {
-        _mint(account, amount * 10 ** _decimals);
-    }
+    // function mint(address account, uint256 amount) public isAdmin {
+    //     _mint(account, amount * 10 ** _decimals);
+    // }
     function withdraw() external isAdmin {
         payable(msg.sender).transfer(address(this).balance);
     }
