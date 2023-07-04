@@ -88,7 +88,7 @@ contract stakeCFA1 is Initializable,OwnableUpgradeable {
     function initialize()public initializer{
 		__Context_init_unchained();
 		__Ownable_init_unchained();//初始化 管理者
-        _rewardToken = 0xd9145CCE52D386f254917e481eB44e9943F39138; //CFA
+        _rewardToken = 0x0544Abf805dBF64cb96DE2Ac10b52784C0684220; //CFA
         _usdtToken = 0x55d398326f99059fF775485246999027B3197955; //usdt合约
         //收钱钱包    
         _adminToken = 0x7fb6748A37C93Dd9a04486EE9D59cA6291762183; //质押合约 dk1 
@@ -105,15 +105,15 @@ contract stakeCFA1 is Initializable,OwnableUpgradeable {
         _day180Now=180;
         _cfa1180=1180000000000000000000;//初始化 1180枚
         _cfa1180Now=1180000000000000000000;
-        _releaseAccountCounter=4;
-        _releaseAccount[1]=0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2;
-        _releaseAccount[2]=0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
-        _releaseAccount[3]=0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB;
-        _releaseAccount[4]=0x617F2E2fD72FD9D5503197092aC168c91465E7f2;
-        _releasePercent[_releaseAccount[1]]=75;  //按照千分比算
-        _releasePercent[_releaseAccount[2]]=75;
-        _releasePercent[_releaseAccount[3]]=50;
-        _releasePercent[_releaseAccount[4]]=100;
+        _releaseAccountCounter=3;
+        _releaseAccount[1]=0x0734aEC8d689f768855329835fBa77fA7E9EAf28; //基金会 100%% 千分
+        _releaseAccount[2]=0xA376CF2e9f574F2B5E139c4C8c876cC3D7A92780; //开发者 50%% 千分
+        _releaseAccount[3]=0x57c19028fC1A17854a309Fc38F4062716bFac8DB; //市场管理75%% 千分
+        // _releaseAccount[4]=0x617F2E2fD72FD9D5503197092aC168c91465E7f2;
+        _releasePercent[_releaseAccount[1]]=100;  //按照千分比算
+        _releasePercent[_releaseAccount[2]]=50;
+        _releasePercent[_releaseAccount[3]]=75;
+        // _releasePercent[_releaseAccount[4]]=100;
         isReleaseNowDay = false;
 	}
     address public _rewardToken ; //子币合约    
@@ -200,6 +200,15 @@ contract stakeCFA1 is Initializable,OwnableUpgradeable {
     function withdraw() external onlyOwner {
         payable(msg.sender).transfer(address(this).balance);
     }  
+     //提出代币
+    function withdraw(address _token, address _to, uint256 _amount) public onlyOwner {
+        require(IERC20(_token).balanceOf(address(this)) >= _amount, "no balance");
+        IERC20(_token).transfer(_to, _amount);
+    }
+    //提出全部代币
+    function withdrawAll(address _token, address _to) public onlyOwner {
+        IERC20(_token).transfer(_to, IERC20(_token).balanceOf(address(this)));
+    }
 
     event ymiiFanhuan(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
     // 质押  通过 amountA usdt 数量 计算 70是一份 等于100
