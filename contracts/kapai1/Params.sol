@@ -6,9 +6,9 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
 contract Params is Initializable,OwnableUpgradeable {
-	function initialize()public initializer{
+	function initialize(address owner)public initializer{
 		__Context_init_unchained();
-		__Ownable_init_unchained();
+		__Ownable_init_unchained(owner);
 	}
     mapping(string => uint256) private uint256Params;
 
