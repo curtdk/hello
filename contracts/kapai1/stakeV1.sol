@@ -413,94 +413,10 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     function withdraw() external onlyOwner {
         payable(msg.sender).transfer(address(this).balance);
     }
-    //管理员设置用户状态
-    function ownerSetUser(
-        address user,
-        uint256 amount,
-        uint256 amountA,
-        uint256 amountB,
-        uint256 stakeTime,
-        uint256 stakeStartTime,
-        uint256 userLastClaim,
-        uint256 userPower,
-        uint256 userEndClaimTime,
-        uint256 userStakeMonthlyearnings
-    ) public onlyOwner {
-        _userStake[user] = amount;
-        _userStakeA[user] = amountA;
-        _userStakeB[user] = amountB;
-        _userStakeTime[user] = stakeTime;
-        _userStakeStartTime[user] = stakeStartTime;
-        _userLastClaimTime[user] = userLastClaim;
-        _userPower[user] = userPower;
-        _userEndClaimTime[user] = userEndClaimTime;
-        _userStakeMonthlyearnings[user] = userStakeMonthlyearnings;
-    }
-     //管理员设置用户状态
-    function ownerSetUser1(
-        address user,
-        uint256 amount,
-        uint256 amountA,
-        uint256 amountB 
-    ) public onlyOwner {
-        _userStake[user] = amount;
-        _userStakeA[user] = amountA;
-        _userStakeB[user] = amountB;        
-    }
-
-     //管理员设置用户状态
-    function ownerSetUserStakeAB0(
-        address user
-    ) public onlyOwner {
-        _userStake[user] = 0;
-        _userStakeA[user] = 0;
-        _userStakeB[user] = 0;
-        _userStakeTime[user] = 0;
-        _userStakeStartTime[user] = 0;
-        _userLastClaimTime[user] = 0;
-        _userPower[user] = 0;
-        _userEndClaimTime[user] = 0;
-        _userStakeMonthlyearnings[user] = 0;
-    }
-
     
-     //管理员设置用户状态
-    function UserStakeAB0(
-        address user
-    ) public   {
-        _userStake[user] = 0;
-        _userStakeA[user] = 0;
-        _userStakeB[user] = 0;
-        _userStakeTime[user] = 0;
-        _userStakeStartTime[user] = 0;
-        _userLastClaimTime[user] = 0;
-        _userPower[user] = 0;
-        _userEndClaimTime[user] = 0;
-        _userStakeMonthlyearnings[user] = 0;
-    }
-    
-      //管理员设置用户状态stakeTime
-    function ownerSetUserStakeTime(
-        address user,       
-        uint256 stakeTime
-    ) public onlyOwner {       
-        _userStakeTime[user] = stakeTime;       
-    }
 
-          //管理员设置用户状态_userMoonClaimTime
-    function ownerSetUserMoonClaimTime(
-        address user,       
-        uint256 MoonClaimTime
-    ) public onlyOwner {       
-        _userMoonClaimTime[user] = MoonClaimTime;       
-    }
-             //管理员设置用户状态_userMoonClaimNumber
-    function ownerSetUseMoonClaimNumber(
-        address user,       
-        uint256 MoonClaimNumber
-    ) public onlyOwner {       
-        _userMoonClaimNumber[user] = MoonClaimNumber;       
-    }
+   
+
  
     // 从指定索引开始返回 invitee 和 inviter 列表
     function getInvitationsFromIndex(uint256 startIndex) external view returns (address[] memory invitees,   uint256[] memory userStakesA, uint256[] memory layer, uint256[] memory userStakeStartTime, uint256[] memory liuShuiIdNumber) {
