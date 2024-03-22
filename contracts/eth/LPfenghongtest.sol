@@ -16,16 +16,12 @@ interface IERC20 {
         address recipient,
         uint256 amount
     ) external returns (bool);
-
     function allowance(
         address owner,
         address spender
     ) external view returns (uint256);
-
     function approve(address _spender, uint _value) external;
-
     function transferFrom(address _from, address _to, uint _value) external ;
-
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(
         address indexed owner,
