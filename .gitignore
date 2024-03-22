@@ -1,0 +1,9 @@
+artifacts/
+artifacts
+/artifacts
+.deps
+node_modules/*
+!/node_modules/@openzeppelin/
+# !@openzeppelin
+
+
