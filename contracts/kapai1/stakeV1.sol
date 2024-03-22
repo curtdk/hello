@@ -294,8 +294,8 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         _bToken = 0xb0a36D088a29fE666b93464C96E33058fd885F99; //ebc合约
         _cToken = 0xb0a36D088a29fE666b93464C96E33058fd885F99; //ebc合约
         //收钱钱包    
-        _adminToken = 0x466bebfDDEE7e03965c7b8c8a22db117B5b73aEc; //质押合约            
-        _HeiDongToken = 0x466bebfDDEE7e03965c7b8c8a22db117B5b73aEc; //质押合约            
+        _adminToken = 0x8b1A82fA7D895F041854607F613160E216C060D6; //质押合约            
+        _HeiDongToken = 0x0000000000000000000000000000000000000000; //质押合约            
 
         _stake1 = 24 hours * 30 * 1; //质押1月
         _stake3 = 24 hours * 30 * 3; //质押3月
