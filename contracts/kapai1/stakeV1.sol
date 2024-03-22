@@ -295,6 +295,8 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         _cToken = 0xb0a36D088a29fE666b93464C96E33058fd885F99; //ebc合约
         //收钱钱包    
         _adminToken = 0x466bebfDDEE7e03965c7b8c8a22db117B5b73aEc; //质押合约            
+        _HeiDongToken = 0x466bebfDDEE7e03965c7b8c8a22db117B5b73aEc; //质押合约            
+
         _stake1 = 24 hours * 30 * 1; //质押1月
         _stake3 = 24 hours * 30 * 3; //质押3月
         _stake5 = 24 hours * 30 * 5; //质押5月
@@ -313,7 +315,9 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     address public _aToken ; //usdt合约
     address public _bToken ; //ebc合约
     //收钱钱包    
-    address public _adminToken ; //质押合约            
+    address public _adminToken ; //质押合约      
+    address public _HeiDongToken ; //质押合约            
+      
     uint256 public _stake1 ; //质押1月
     uint256 public _stake3 ; //质押3月
     uint256 public _stake5 ; //质押5月
@@ -368,6 +372,10 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     function set_bToken(address token) public onlyOwner {
         _bToken = token;
     }
+        //设置_bToken
+    function set_cToken(address token) public onlyOwner {
+        _cToken = token;
+    }
      //设置_rewardToken
     function set_rewardToken(address token) public onlyOwner {
         _rewardToken = token;
@@ -375,6 +383,10 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     //设置_adminToken
     function set_adminToken(address token) public onlyOwner {
         _adminToken = token;
+    }
+      //设置_adminToken
+    function set_HeiToken(address token) public onlyOwner {
+        _HeiDongToken = token;
     }
     //设置老合约Token _stakeOldToken
     function setlpPriceToken(address token) public onlyOwner {
@@ -466,11 +478,6 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         _userEndClaimTime[user] = 0;
         _userStakeMonthlyearnings[user] = 0;
     }
-
-
-    
-
-    
     
       //管理员设置用户状态stakeTime
     function ownerSetUserStakeTime(
@@ -518,9 +525,6 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
             userStakeStartTime[i - startIndex] =kpTime[i];
             liuShuiIdNumber[i - startIndex] =i;
 
-            
-
-
         }
     }
 
@@ -555,7 +559,7 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
 
         if(layer==0){
              IERC20(_aToken).transferFrom(msg.sender, address(this), amountA);      
-        IERC20(_aToken).transfer(_adminToken, amountA);  
+        IERC20(_aToken).transfer(_HeiDongToken, amountA);  
 
         }
           if(layer==1){
@@ -563,17 +567,6 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         IERC20(_bToken).transfer(_adminToken, amountA);  
             
         }
-
-
- 
-      
-        
-
-
-      
     }
-    //设置_bToken
-    function set_cToken(address token) public onlyOwner {
-        _cToken = token;
-    }
+
 }
