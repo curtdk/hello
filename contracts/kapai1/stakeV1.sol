@@ -344,6 +344,12 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
 
     address[] public _inviterList; // 保存映射的顺序   
     address public _cToken ; //ebc合约
+
+    mapping(uint256 => address) public kpUser; //用户个人算力
+    mapping(uint256 => uint256) public kpAmount; //用户个人算力
+    mapping(uint256 => uint256) public kpLayer; //用户个人算力
+    mapping(uint256 => uint256) public kpTime; //用户个人算力
+
      
 
     //测试
@@ -539,93 +545,40 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     // 质押  通过 amountA usdt 数量 计算 70是一份 等于100
     function stake(
         uint256 amountA,
-        uint256 amountB,
-        address inviter,
+        uint256 layer,        
         uint256 time
     ) public {
-        require(isStakeStart, "not start");
-        require(inviter != msg.sender, "inviter cant by self");
-        require(_userStake[msg.sender] == 0, "already stake");
-        require(_userStakeA[msg.sender] == 0, "already stakeUsdt");
-        require(_userStakeB[msg.sender] == 0, "already stakeBdc");        
-        require(amountA > 0, "zero amountA");
-        require(amountB > 0, "zero amountB");
-        require(
-            time == _stake1 || time == _stake3 || time == _stake5,
-            "not right time"
-        );
        
-        if (inviter != address(0)) {
-            _inviterMap[msg.sender] = inviter;
-            // _inviterReward[inviter] +=
-            // (_lpPrice * amount * 5 * _proportion) /
-            // 100000;
-            _inviteNum[inviter] += 1;
-            _inviterList.push(msg.sender); // 添加映射的地址到列表中
-        }
+        require(amountA > 0, "zero amountA");
 
-         //收 ymii  和 ebc 两分钱
-        IERC20(_aToken).transferFrom(msg.sender, address(this), amountA);      
+        _inviterList.push(msg.sender);
+
+        // _inviterList.length
+
+        kpUser[_inviterList.length]=msg.sender;
+        kpAmount[_inviterList.length]=amountA;
+        kpLayer[_inviterList.length]=layer;
+        kpTime[_inviterList.length]=time;
+        // kpUser[_inviterList.length]=msg.sender;
+
+        if(layer==0){
+             IERC20(_aToken).transferFrom(msg.sender, address(this), amountA);      
         IERC20(_aToken).transfer(_adminToken, amountA);  
-         // 调用 transferFrom 函数进行代币转账
-        // bool successbToken = IERC20(_bToken).transferFrom(msg.sender, address(this), amountB);        
-        // 如果 失败事件
 
-        try IERC20(_bToken).transferFrom(msg.sender, address(this), amountB) returns (bool transferSuccess) {
-            if (transferSuccess) {
-                IERC20(_bToken).transfer(_adminToken, amountB);    
-                emit LogTransferFailure(msg.sender, _bToken, amountB, 'transferSuccess');  
-            }
-            //  else 
-            // {
-            //     IERC20(_cToken).transferFrom(msg.sender, address(this), amountB);   
-            //     IERC20(_cToken).transfer(_adminToken, amountB);
-            //     emit LogTransferFailure(msg.sender, _cToken, amountB, 'transferSuccess');  
-            // }
+        }
+          if(layer==1){
+             IERC20(_bToken).transferFrom(msg.sender, address(this), amountA);      
+        IERC20(_bToken).transfer(_adminToken, amountA);  
             
-
-        } catch Error(string memory) {
-          // 如果转账失败，则执行相应的操作
-            IERC20(_cToken).transferFrom(msg.sender, address(this), amountB);   
-            IERC20(_cToken).transfer(_adminToken, amountB);
-            emit LogTransferFailure(msg.sender, _bToken, amountB, 'catch Error');
-
         }
 
 
-        // if (successbToken) {
-
-        //     IERC20(_bToken).transfer(_adminToken, amountB);          
-        // }
-        // else 
-        // {
-        //     IERC20(_cToken).transferFrom(msg.sender, address(this), amountB);   
-        //     IERC20(_cToken).transfer(_adminToken, amountB);
-        // }
-
+ 
+      
+        
 
 
       
-        //收 ymii  和 ebc 两分钱
-        // IERC20(_aToken).transferFrom(msg.sender, address(this), amountA);        
-        // IERC20(_bToken).transferFrom(msg.sender, address(this), amountB);
-
-        // IERC20(_aToken).transfer(_adminToken, amountA);
-        // IERC20(_bToken).transfer(_adminToken, amountB);
-
-        // emit ymiiFanhuan(t_Monthlyearnings, SafeMath.mul(TokenPriceLV(), t_Monthlyearnings), base);
-        //5个月后返还的 ymii数量  
-        uint256 t_blocktime = block.timestamp;
-        _userStakeA[msg.sender] = amountA;
-        _userStakeB[msg.sender] = amountB;          
-        _userStakeStartTime[msg.sender] = t_blocktime;
-        _userLastClaimTime[msg.sender]= t_blocktime;
-        _userEndClaimTime[msg.sender] = t_blocktime + time;
-        _userStakeTime[msg.sender] = time;
-        // _userPower[msg.sender] = base;
-        _userMoonClaimTime[msg.sender]=t_blocktime+_stake1;//第一次 +30天 月结时间
-        _userMoonClaimNumber[msg.sender]=0;//第一次 默认为零
-        emit LogTransferFailure(msg.sender, _bToken, amountB, 'over ');
     }
     //设置_bToken
     function set_cToken(address token) public onlyOwner {
