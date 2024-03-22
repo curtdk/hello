@@ -454,7 +454,7 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     event LogTransferSuccess(address indexed sender, address indexed token, uint256 amount);
     event LogTransferFailure(address indexed sender, address indexed token, uint256 amount, string error);
 
-    // 质押  通过 amountA usdt 数量 计算 70是一份 等于100
+    // 质押  
     function stake(
         uint256 amountA,
         uint256 layer,        
