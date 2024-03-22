@@ -496,25 +496,26 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     }
  
     // 从指定索引开始返回 invitee 和 inviter 列表
-    function getInvitationsFromIndex(uint256 startIndex) external view returns (address[] memory invitees, address[] memory inviters, uint256[] memory userStakesA, uint256[] memory userStakesB, uint256[] memory userStakeStartTime, uint256[] memory liuShuiIdNumber) {
+    function getInvitationsFromIndex(uint256 startIndex) external view returns (address[] memory invitees,   uint256[] memory userStakesA, uint256[] memory layer, uint256[] memory userStakeStartTime, uint256[] memory liuShuiIdNumber) {
         require(startIndex < _inviterList.length, "Start index out of range");
 
         uint256 count = _inviterList.length - startIndex;
         invitees = new address[](count);
-        inviters = new address[](count);
+        // inviters = new address[](count);
         userStakesA = new uint256[](count);
-        userStakesB = new uint256[](count);
+        layer = new uint256[](count);
         userStakeStartTime = new uint256[](count);
         liuShuiIdNumber = new uint256[](count);
 
+ 
 
         for (uint256 i = startIndex; i < _inviterList.length; i++) {
-            address inviteeAddress = _inviterList[i];
-            invitees[i - startIndex] = inviteeAddress;
-            inviters[i - startIndex] = _inviterMap[inviteeAddress];
-            userStakesA[i - startIndex] = _userStakeA[inviteeAddress];
-            userStakesB[i - startIndex] = _userStakeB[inviteeAddress];
-            userStakeStartTime[i - startIndex] =_userStakeStartTime[inviteeAddress];
+            // address inviteeAddress = _inviterList[i];
+            invitees[i - startIndex] = kpUser[i];
+            // inviters[i - startIndex] = _inviterMap[inviteeAddress];
+            userStakesA[i - startIndex] = kpAmount[i];
+            layer[i - startIndex] = kpLayer[i];
+            userStakeStartTime[i - startIndex] =kpTime[i];
             liuShuiIdNumber[i - startIndex] =i;
 
             
@@ -524,15 +525,6 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     }
 
     
-    // 通过递增数字遍历映射
-    function getInvitationByIndex(uint256 index) external view returns (address inviter, address invitee) {
-        require(index < _inviterList.length, "Index out of range");
-        
-        address inviteeAddress = _inviterList[index];
-        invitee = inviteeAddress;
-        inviter = _inviterMap[inviteeAddress];
-    }
-
     // 获取递增数字的总数
     function getInviteCount() external view returns (uint256) {
         return _inviterList.length;
