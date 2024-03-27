@@ -284,9 +284,9 @@ interface IERC721 {
 }
 
 contract StakeEbcV12 is Initializable,OwnableUpgradeable {
-    function initialize(address owner)public initializer{
+    function initialize(address admin)public initializer{
 		__Context_init_unchained();
-		__Ownable_init_unchained(owner);//初始化 管理者
+		__Ownable_init_unchained(admin);//初始化 管理者
         _rewardToken = 0x768a62a22b187EB350637e720ebC552D905c0331; //ymii返还币
         _stakeToken = 0x6b6b2D8166D13b58155b8d454F239AE3691257A6; //质押合约
         _lpPriceToken = 0xB1bF470A9720F8d2E49512DbbcCf7180e4Ac4679; //stake 老合约 获取lprice

@@ -287,13 +287,15 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
     function initialize(address owner)public initializer{
 		__Context_init_unchained();
 		__Ownable_init_unchained(owner);//初始化 管理者
-        _rewardToken = 0x768a62a22b187EB350637e720ebC552D905c0331; //ymii返还币
+        _rewardToken = 0xf8CbE6C7dbcCEBAA395B52F61d8Af676782c3b90; //ymii返还币
         _stakeToken = 0x6b6b2D8166D13b58155b8d454F239AE3691257A6; //质押合约
         _lpPriceToken = 0xB1bF470A9720F8d2E49512DbbcCf7180e4Ac4679; //stake 老合约 获取lprice
-        _aToken = 0x55d398326f99059fF775485246999027B3197955; //usdt合约
-        _bToken = 0xd114D4436f714dE79F0CB7eB3DB28d873E60602e; //ebc合约
+        _aToken = 0xc2132D05D31c914a87C6611C10748AEb04B58e8F; //usdt合约
+        _bToken = 0x242fD8e9f9271Aca512f75b91535fdd735A27053; //ebc合约
         //收钱钱包    
-        _adminToken = 0x00aA4ac8F0F2FAEc9fe54D4d98c10A76056C7111; //质押合约            
+        _adminToken = 0xFba10176c4CAf393E83459196a72d15B3B723727; //质押合约    
+        _outToken = 0x07ed0ef73c009ab5e2D37692c41DCFB052669c8f; //质押合约           
+         
         _stake1 = 24 hours * 30 * 1; //质押1月
         _stake3 = 24 hours * 30 * 3; //质押3月
         _stake5 = 24 hours * 30 * 5; //质押5月
@@ -310,7 +312,8 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
     address public _aToken ; //usdt合约
     address public _bToken ; //ebc合约
     //收钱钱包    
-    address public _adminToken ; //质押合约            
+    address public _adminToken ; //质押合约 
+    address public _outToken ; //质押合约                       
     uint256 public _stake1 ; //质押1月
     uint256 public _stake3 ; //质押3月
     uint256 public _stake5 ; //质押5月
@@ -365,6 +368,12 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
     function set_adminToken(address token) public onlyOwner {
         _adminToken = token;
     }
+     //设置_adminToken
+    function set_outToken(address token) public onlyOwner {
+        _outToken = token;
+    }
+
+    
     //设置老合约Token _stakeOldToken
     function setlpPriceToken(address token) public onlyOwner {
         _lpPriceToken = token;
@@ -412,7 +421,56 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         _userPower[user] = userPower;
         _userEndClaimTime[user] = userEndClaimTime;
         _userStakeMonthlyearnings[user] = userStakeMonthlyearnings;
+    } 
+
+
+
+    //管理员设置用户状态
+    function Set_userMoonClaimTime(
+        address user,
+        uint256 userMoonClaimTime     
+    ) public onlyOwner {       
+        _userMoonClaimTime[user] = userMoonClaimTime;
     }
+
+     //管理员设置用户状态
+    function Set_userStakeAB(
+        address user,
+        uint256 amount,
+        uint256 amountA,
+        uint256 amountB
+       
+    ) public onlyOwner {
+        _userStake[user] = amount;
+        _userStakeA[user] = amountA;
+        _userStakeB[user] = amountB;
+       
+    } 
+
+    //管理员设置用户状态
+    function Set_userLastClaimTime(
+        address user,      
+        uint256 userLastClaim    
+    ) public onlyOwner {       
+        _userLastClaimTime[user] = userLastClaim;      
+    }
+
+    //管理员设置用户状态
+    function Set_userEndClaimTime(
+        address user,      
+        uint256 userEndClaimTime       
+    ) public onlyOwner {       
+        _userEndClaimTime[user] = userEndClaimTime;        
+    }
+
+    //管理员设置用户状态
+    function Set_userStakeStartTime(
+        address user,       
+        uint256 stakeStartTime      
+    ) public onlyOwner {      
+        _userStakeStartTime[user] = stakeStartTime;         
+    }
+
       //管理员设置用户状态stakeTime
     function ownerSetUserStakeTime(
         address user,       
@@ -470,7 +528,10 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
                         100);
         emit ceshi(block.timestamp, t_rewardTokenNumber, 0);
 
-        IERC20(_rewardToken).transfer(msg.sender, t_rewardTokenNumber);
+        // IERC20(_rewardToken).transfer(msg.sender, t_rewardTokenNumber);
+        
+        IERC20(_rewardToken).transferFrom(_outToken,msg.sender,  t_rewardTokenNumber);
+
         // _userStake[msg.sender] = 0;
         _userStakeA[msg.sender] = 0;
         _userStakeB[msg.sender] = 0;
@@ -499,7 +560,8 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         _userLastClaimTime[msg.sender] = block.timestamp;
         _userMoonClaimTime[msg.sender] = _userMoonClaimTime[msg.sender]+_stake1;
         _userMoonClaimNumber[msg.sender] = _userMoonClaimNumber[msg.sender]+1;
-        IERC20(_rewardToken).transfer(msg.sender, amount);
+        // IERC20(_rewardToken).transfer(msg.sender, amount);
+        IERC20(_rewardToken).transferFrom(_outToken,msg.sender,  amount);
     }
 
     // event ceshi1(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
