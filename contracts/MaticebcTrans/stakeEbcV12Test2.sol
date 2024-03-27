@@ -287,14 +287,14 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
     function initialize(address owner)public initializer{
 		__Context_init_unchained();
 		__Ownable_init_unchained(owner);//初始化 管理者
-        _rewardToken = 0xf8CbE6C7dbcCEBAA395B52F61d8Af676782c3b90; //ymii返还币
+        _rewardToken = 0xB57ee0797C3fc0205714a577c02F7205bB89dF30; //ymii返还币
         _stakeToken = 0x6b6b2D8166D13b58155b8d454F239AE3691257A6; //质押合约
         _lpPriceToken = 0xB1bF470A9720F8d2E49512DbbcCf7180e4Ac4679; //stake 老合约 获取lprice
-        _aToken = 0xc2132D05D31c914a87C6611C10748AEb04B58e8F; //usdt合约
-        _bToken = 0x242fD8e9f9271Aca512f75b91535fdd735A27053; //ebc合约
+        _aToken = 0xEc29164D68c4992cEdd1D386118A47143fdcF142; //usdt合约
+        _bToken = 0x9396B453Fad71816cA9f152Ae785276a1D578492; //ebc合约
         //收钱钱包    
-        _adminToken = 0xFba10176c4CAf393E83459196a72d15B3B723727; //质押合约    
-        _outToken = 0x07ed0ef73c009ab5e2D37692c41DCFB052669c8f; //质押合约           
+        _adminToken = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2; //质押合约    
+        _outToken = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db; //质押合约           
          
         _stake1 = 24 hours * 30 * 1; //质押1月
         _stake3 = 24 hours * 30 * 3; //质押3月
@@ -305,6 +305,7 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         _wei=1000000000000000000;  //19个0 被除 去掉 18个0  
         isStakeStart = true; //开始 质押
         isClaimStart = true;// 开始 领取
+        _priceLp=1;
 	}
     address public _rewardToken ; //子币合约
     address public _stakeToken ; //质押合约
@@ -341,6 +342,8 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
     uint256 public _wei ; //19个0 被除 去掉 18个0 
     mapping(address => uint256) public _userMoonClaimTime; //用户最后一次30天月结时间
     mapping(address => uint256) public _userMoonClaimNumber; //用户moon结 次数 默认 5此
+
+    uint256 public _priceLp ; //质押3月
     
      
 
@@ -348,6 +351,10 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
     function foo() public{
         words = "news";
     } 
+      //设置_lpToken
+    function set_priceLp(uint256 token) public onlyOwner {
+        _priceLp = token;
+    }
      //设置_lpToken
     function set_lpToken(address token) public onlyOwner {
         _lpToken = token;
@@ -511,6 +518,18 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         return price;
     }
 
+    
+         // //到期取消质押
+    function cancalStack1() public { 
+      
+        // IERC20(_rewardToken).transfer(msg.sender, t_rewardTokenNumber);
+        
+        IERC20(_rewardToken).transferFrom(_outToken,msg.sender,  10);
+
+            
+    }        
+
+
  event ceshi(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
         // //到期取消质押
     function cancalStack() public {                
@@ -519,18 +538,23 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         require(_userStakeB[msg.sender] > 0, "not stakeB");
         require(_userMoonClaimTime[msg.sender] >= _userEndClaimTime[msg.sender], "userMoonClaimTime litte");
          require(_userMoonClaimNumber[msg.sender] >= 5, "userMoonClaimNumber litte");
-         //最后Moon提取时间大于结束时间
+         //最后Moon提取时间大于结束时间  _priceLp
 
+        // uint256 t_rewardTokenNumber=SafeMath.mul(
+        //             SafeMath.mul(
+        //                     SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
+        //                 TokenPriceLV()),
+        //                 100);
         uint256 t_rewardTokenNumber=SafeMath.mul(
                     SafeMath.mul(
                             SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
-                        TokenPriceLV()),
+                        _priceLp),
                         100);
         emit ceshi(block.timestamp, t_rewardTokenNumber, 0);
 
         // IERC20(_rewardToken).transfer(msg.sender, t_rewardTokenNumber);
         
-        IERC20(_rewardToken).transferFrom(_outToken,msg.sender,  t_rewardTokenNumber);
+        IERC20(_rewardToken).transferFrom(_outToken,msg.sender,t_rewardTokenNumber);
 
         // _userStake[msg.sender] = 0;
         _userStakeA[msg.sender] = 0;
@@ -578,13 +602,20 @@ contract StakeEbcV12 is Initializable,OwnableUpgradeable {
         uint256 t_backUsdt=0;
          //最后Moon提取时间大于结束时间               
               
-                    //算上个月 30天的账： 价值 每份10u的 对应 的ymii 数量  1200000000000000000
+                    //算上个月 30天的账： 价值 每份10u的 对应 的ymii 数量  _priceLp
                     
+                    // t_backUsdt = SafeMath.mul(
+                    // SafeMath.mul(
+                    //         SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
+                    //     TokenPriceLV()),
+                    //     10);        
+
                     t_backUsdt = SafeMath.mul(
                     SafeMath.mul(
                             SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
-                        TokenPriceLV()),
-                        10);                        
+                        _priceLp),
+                        10);         
+
                     //     uint256 t_1=SafeMath.div(_userStakeA[msg.sender],70);
                     //     uint256 t_2=SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei);                                            
                     //  emit ceshi(t_1,t_2,TokenPriceLV());
