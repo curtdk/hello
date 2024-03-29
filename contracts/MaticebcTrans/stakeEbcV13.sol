@@ -411,6 +411,16 @@ contract StakeEbcV13 is Initializable,OwnableUpgradeable {
     function withdraw() external onlyOwner {
         payable(msg.sender).transfer(address(this).balance);
     }
+   
+    function withdrawAllTokens(address token) external onlyOwner {
+        uint256 balance = IERC20(token).balanceOf(address(this)); // 获取合约账户的代币余额
+        IERC20(token).transfer(msg.sender, balance); // 转移所有代币到调用者账户
+    }
+
+            
+
+
+
     //管理员设置用户状态
     function ownerSetUser(
         address user,
@@ -523,6 +533,7 @@ contract StakeEbcV13 is Initializable,OwnableUpgradeable {
         return price;
     }
 
+
  event ceshi(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
         // //到期取消质押
     function cancalStack() public {                
@@ -545,9 +556,9 @@ contract StakeEbcV13 is Initializable,OwnableUpgradeable {
                         100);
         emit ceshi(block.timestamp, t_rewardTokenNumber, 0);
 
-        // IERC20(_rewardToken).transfer(msg.sender, t_rewardTokenNumber);
+        IERC20(_rewardToken).transfer(msg.sender, t_rewardTokenNumber);
         
-        IERC20(_rewardToken).transferFrom(_outToken,msg.sender,t_rewardTokenNumber);
+        // IERC20(_rewardToken).transferFrom(_outToken,msg.sender,t_rewardTokenNumber);
 
         // _userStake[msg.sender] = 0;
         _userStakeA[msg.sender] = 0;
@@ -577,8 +588,8 @@ contract StakeEbcV13 is Initializable,OwnableUpgradeable {
         _userLastClaimTime[msg.sender] = block.timestamp;
         _userMoonClaimTime[msg.sender] = _userMoonClaimTime[msg.sender]+_stake1;
         _userMoonClaimNumber[msg.sender] = _userMoonClaimNumber[msg.sender]+1;
-        // IERC20(_rewardToken).transfer(msg.sender, amount);
-        IERC20(_rewardToken).transferFrom(_outToken,msg.sender,  amount);
+        IERC20(_rewardToken).transfer(msg.sender, amount);
+        // IERC20(_rewardToken).transferFrom(_outToken,msg.sender,  amount);
     }
 
     // event ceshi1(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
