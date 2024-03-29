@@ -290,12 +290,12 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         _rewardToken = 0x768a62a22b187EB350637e720ebC552D905c0331; //ymii返还币
         _stakeToken = 0x6b6b2D8166D13b58155b8d454F239AE3691257A6; //质押合约
         _lpPriceToken = 0xB1bF470A9720F8d2E49512DbbcCf7180e4Ac4679; //stake 老合约 获取lprice
-        _aToken = 0x768a62a22b187EB350637e720ebC552D905c0331; //usdt合约   0x55d398326f99059fF775485246999027B3197955
-        _bToken = 0xb0a36D088a29fE666b93464C96E33058fd885F99; //ebc合约
+        _aToken = 0x2C3951011e089711D0aA6Ea6A29F5527f8CD76c1; //   YL
+        _bToken = 0xc2132D05D31c914a87C6611C10748AEb04B58e8F; //usdt合约
         _cToken = 0xb0a36D088a29fE666b93464C96E33058fd885F99; //ebc合约
         //收钱钱包    
-        _adminToken = 0x8b1A82fA7D895F041854607F613160E216C060D6; //质押合约            
-        _HeiDongToken = 0x0000000000000000000000000000000000000000; //质押合约            
+        _adminToken = 0x4F234BC3d68F303cD3e15f7f81B7491Ac7348754; //质押合约            
+        _HeiDongToken = 0x4F234BC3d68F303cD3e15f7f81B7491Ac7348754; //质押合约            
 
         _stake1 = 24 hours * 30 * 1; //质押1月
         _stake3 = 24 hours * 30 * 3; //质押3月
