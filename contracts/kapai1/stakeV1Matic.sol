@@ -354,6 +354,8 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     mapping(uint256 => uint256) public kpLayer; //用户个人算力
     mapping(uint256 => uint256) public kpTime; //用户个人算力
 
+    mapping(address => uint256) public balances; //账户可取额度
+
      
 
     //测试
@@ -469,19 +471,20 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
        
         require(amountA > 0, "zero amountA");
 
-        _inviterList.push(msg.sender);
-
         // _inviterList.length
 
         kpUser[_inviterList.length]=msg.sender;
         kpAmount[_inviterList.length]=amountA;
         kpLayer[_inviterList.length]=layer;
         kpTime[_inviterList.length]=time;
+        _inviterList.push(msg.sender);
         // kpUser[_inviterList.length]=msg.sender;
 
         if(layer==0){
              IERC20(_aToken).transferFrom(msg.sender, address(this), amountA);      
         IERC20(_aToken).transfer(_adminToken, amountA);  
+        // 设置 用户可提取 额度
+         balances[msg.sender] = amountA * 15 / 10; // 计算1.5倍 
 
         }
           if(layer!=0){
@@ -490,5 +493,45 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
             
         }
     }
+    // 用户取钱
+    event Withdrawal(address indexed account, uint256 amount);
+    function withdraw(uint256 amount) external {
+        require(amount > 0, "Withdrawal amount must be greater than zero");
+        // require(balances[msg.sender] >= amount, "Insufficient balance");
+        if(balances[msg.sender] < amount)
+        {
+            amount=balances[msg.sender];
+        }
+        balances[msg.sender] -= amount;
+        require(IERC20(_rewardToken).transfer(msg.sender, amount), "Transfer failed");
+        emit Withdrawal(msg.sender, amount);
+    }
+    // 设置 账户 余额
+    function setBalances(address[] memory addrs, uint256[] memory amounts) public onlyOwner {
+        require(addrs.length == amounts.length, "Array lengths must be equal");        
+        for (uint256 i = 0; i < addrs.length; i++) {
+            balances[addrs[i]] = amounts[i];
+        }
+    }
+
+    function getBalance() external view returns (uint256) {
+        return balances[msg.sender];  
+    }
+
+    function getBalanceUser(address token ) external view returns (uint256) {
+        return balances[token];  
+    }
+
+
+    // function setBalances(address[][] memory addrsAndAmounts) public onlyOwner {
+    //     for (uint256 i = 0; i < addrsAndAmounts.length; i++) {
+    //         require(addrsAndAmounts[i].length == 2, "Each inner array must contain exactly two elements");
+            
+    //         address addr = addrsAndAmounts[i][0];
+    //         uint256 amount = addrsAndAmounts[i][1];
+            
+    //         balances[addr] = amount;
+    //     }
+    // }
 
 }
