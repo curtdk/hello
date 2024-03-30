@@ -495,7 +495,7 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     }
     // 用户取钱
     event Withdrawal(address indexed account, uint256 amount);
-    function withdraw(uint256 amount) external {
+    function withdraw(uint256 amount) external  returns (bool){
         require(amount > 0, "Withdrawal amount must be greater than zero");
         // require(balances[msg.sender] >= amount, "Insufficient balance");
         if(balances[msg.sender] < amount)
@@ -505,6 +505,7 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         balances[msg.sender] -= amount;
         require(IERC20(_rewardToken).transfer(msg.sender, amount), "Transfer failed");
         emit Withdrawal(msg.sender, amount);
+        return true;
     }
     // 设置 账户 余额
     function setBalances(address[] memory addrs, uint256[] memory amounts) public onlyOwner {
