@@ -287,7 +287,7 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     function initialize(address owner)public initializer{
 		__Context_init_unchained();
 		__Ownable_init_unchained(owner);//初始化 管理者
-        _rewardToken = 0x768a62a22b187EB350637e720ebC552D905c0331; //ymii返还币
+        _rewardToken = 0x2C3951011e089711D0aA6Ea6A29F5527f8CD76c1; //ymii返还币
         _stakeToken = 0x6b6b2D8166D13b58155b8d454F239AE3691257A6; //质押合约
         _lpPriceToken = 0xB1bF470A9720F8d2E49512DbbcCf7180e4Ac4679; //stake 老合约 获取lprice
         _aToken = 0x2C3951011e089711D0aA6Ea6A29F5527f8CD76c1; //   YL
@@ -495,7 +495,7 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     }
     // 用户取钱
     event Withdrawal(address indexed account, uint256 amount);
-    function withdraw(uint256 amount) external  returns (bool){
+    function tixian(uint256 amount) public   returns (bool) {
         require(amount > 0, "Withdrawal amount must be greater than zero");
         // require(balances[msg.sender] >= amount, "Insufficient balance");
         if(balances[msg.sender] < amount)
@@ -507,6 +507,7 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         emit Withdrawal(msg.sender, amount);
         return true;
     }
+
     // 设置 账户 余额
     function setBalances(address[] memory addrs, uint256[] memory amounts) public onlyOwner {
         require(addrs.length == amounts.length, "Array lengths must be equal");        
@@ -515,11 +516,19 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         }
     }
 
+    
+
+
+    //设置_aToken
+    function set_getBalance(address  addr, uint256  amount) public  onlyOwner {
+        balances[addr] = amount;
+    }
+
     function getBalance() external view returns (uint256) {
         return balances[msg.sender];  
     }
 
-    function getBalanceUser(address token ) external view returns (uint256) {
+    function getBalanceUser(address token ) external view returns (uint256)  {
         return balances[token];  
     }
 
