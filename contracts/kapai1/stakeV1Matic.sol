@@ -467,7 +467,7 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         uint256 amountA,
         uint256 layer,        
         uint256 time
-    ) public {
+    ) public returns (string memory) {
        
         require(amountA > 0, "zero amountA");
 
@@ -489,9 +489,10 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         }
           if(layer!=0){
              IERC20(_bToken).transferFrom(msg.sender, address(this), amountA);      
-        IERC20(_bToken).transfer(_HeiDongToken, amountA);  
-            
+        IERC20(_bToken).transfer(_HeiDongToken, amountA); 
         }
+                 
+        return  'success';
     }
     // 用户取钱
     event Withdrawal(address indexed account, uint256 amount);
@@ -533,15 +534,6 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     }
 
 
-    // function setBalances(address[][] memory addrsAndAmounts) public onlyOwner {
-    //     for (uint256 i = 0; i < addrsAndAmounts.length; i++) {
-    //         require(addrsAndAmounts[i].length == 2, "Each inner array must contain exactly two elements");
-            
-    //         address addr = addrsAndAmounts[i][0];
-    //         uint256 amount = addrsAndAmounts[i][1];
-            
-    //         balances[addr] = amount;
-    //     }
-    // }
+
 
 }
