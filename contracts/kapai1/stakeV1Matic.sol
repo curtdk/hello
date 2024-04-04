@@ -306,6 +306,8 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         _wei=1000000000000000000;  //19个0 被除 去掉 18个0  
         isStakeStart = true; //开始 质押
         isClaimStart = true;// 开始 领取
+        _fee=10;
+        _feeChi=0;
        
 
 	}
@@ -355,6 +357,10 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
     mapping(uint256 => uint256) public kpTime; //用户个人算力
 
     mapping(address => uint256) public balances; //账户可取额度
+    uint256 public _fee ; //10% 手续费
+    uint256 public _feeChi ; //10% 手续费 池子
+
+
 
      
 
@@ -495,17 +501,24 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         return  'success';
     }
     // 用户取钱
-    event Withdrawal(address indexed account, uint256 amount);
+    event Withdrawal(address indexed account, uint256 amount, uint256 withdrawAmount);
     function tixian(uint256 amount) public   returns (bool) {
         require(amount > 0, "Withdrawal amount must be greater than zero");
         // require(balances[msg.sender] >= amount, "Insufficient balance");
+          
+
         if(balances[msg.sender] < amount)
         {
             amount=balances[msg.sender];
         }
+          //  计算手续费
+        uint256 fee = amount * _fee / 100;
+        uint256 withdrawAmount = amount - amount * _fee / 100; // 实际提现金额
+
         balances[msg.sender] -= amount;
-        require(IERC20(_rewardToken).transfer(msg.sender, amount), "Transfer failed");
-        emit Withdrawal(msg.sender, amount);
+        require(IERC20(_rewardToken).transfer(msg.sender, withdrawAmount), "Transfer failed");
+        _feeChi=_feeChi+fee;
+        emit Withdrawal(msg.sender, amount,withdrawAmount);
         return true;
     }
 
@@ -531,6 +544,15 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
 
     function getBalanceUser(address token ) external view returns (uint256)  {
         return balances[token];  
+    }
+
+     //设置_10% 手续费
+    function _feeSet(uint256 token) public onlyOwner {
+        _fee = token;
+    }
+     //设置 手续费 池子
+    function _feeChiSet(uint256 token) public onlyOwner {
+        _feeChi = token;
     }
 
 
