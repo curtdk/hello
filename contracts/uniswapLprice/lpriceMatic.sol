@@ -202,9 +202,9 @@ contract Params is Initializable,OwnableUpgradeable {
      function initialize(address token)public initializer{
 		__Context_init_unchained();
 		__Ownable_init_unchained(token);//初始化 管理者      
-        _lpToken = 0x6b6b2D8166D13b58155b8d454F239AE3691257A6; //lp pancake  ymii/usdt  
-        _pancakeRouter = 0x10ED43C718714eb63d5aA57B78B54704E256024E;  //pancake Router 地址       
-        _usdtPrice=100000000000000000;
+        _lpToken = 0x040185DeF03011d056a3D9beBcB8713f10303e70; //lp pancake  ymii/usdt  
+        _pancakeRouter = 0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff;  //pancake Router 地址       
+        _usdtPrice=1000000000000000000;
         t_wei=14;
 	}       
     string public words; // 字符串，可以通过逻辑合约的函数改变   
@@ -294,6 +294,21 @@ contract Params is Initializable,OwnableUpgradeable {
     // return sqrtK.mul(2).mul(HomoraMath.sqrt(px0)).div(2**56).mul(HomoraMath.sqrt(px1)).div(2**56);
 
   }
+
+  function getTokenPriceYmii(address ymiiWpc,address wpcUsdt) external view  returns (uint) {   
+
+       (uint r0, uint r1, ) = IUniswapV2Pair(ymiiWpc).getReserves();  
+
+        // address _pancakeRouter = 0x10ED43C718714eb63d5aA57B78B54704E256024E;
+        uint px0=IPancakeRouter01(_pancakeRouter).getAmountOut(_usdtPrice,r0,r1); 
+
+        (uint L0, uint L1, ) = IUniswapV2Pair(wpcUsdt).getReserves();   
+        //算出阿来 px0  px1   
+        // address _pancakeRouter = 0x10ED43C718714eb63d5aA57B78B54704E256024E;
+        uint Lpx0=IPancakeRouter01(_pancakeRouter).getAmountOut(_usdtPrice,L0,L1); 
+        uint ymiiPrice=px0*Lpx0;
+        return ymiiPrice;
+    }
 
   
 

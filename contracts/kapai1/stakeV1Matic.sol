@@ -486,16 +486,25 @@ contract stakeV1 is Initializable,OwnableUpgradeable {
         _inviterList.push(msg.sender);
         // kpUser[_inviterList.length]=msg.sender;
 
+//         require(IERC20(_aToken).transferFrom(msg.sender, address(this), amountA), "transferFrom failed");
+// require(IERC20(_aToken).transfer(_adminToken, amountA), "transfer failed");
+
+
         if(layer==0){
-             IERC20(_aToken).transferFrom(msg.sender, address(this), amountA);      
-        IERC20(_aToken).transfer(_adminToken, amountA);  
+            //  IERC20(_aToken).transferFrom(msg.sender, address(this), amountA);      
+            require(IERC20(_aToken).transferFrom(msg.sender, address(this), amountA), "_a-to-this transferFrom failed");
+        // IERC20(_aToken).transfer(_adminToken, amountA);  
+            require(IERC20(_aToken).transfer(_adminToken, amountA), "a-to-admin transfer failed");
+
         // 设置 用户可提取 额度
          balances[msg.sender] = amountA * 15 / 10; // 计算1.5倍 
 
         }
           if(layer!=0){
-             IERC20(_bToken).transferFrom(msg.sender, address(this), amountA);      
-        IERC20(_bToken).transfer(_HeiDongToken, amountA); 
+                // IERC20(_bToken).transferFrom(msg.sender, address(this), amountA);      
+            require(IERC20(_bToken).transferFrom(msg.sender, address(this), amountA), "_b-to-this transferFrom failed");
+                //  IERC20(_bToken).transfer(_HeiDongToken, amountA); 
+            require(IERC20(_bToken).transfer(_adminToken, amountA), "b-to-admin transfer failed");
         }
                  
         return  'success';

@@ -50,6 +50,7 @@ function lpPrice() external view returns (uint256);
 function getTokenPrice(address pair) external view  returns (uint);
 function getTokenPriceLV(address t_pair) external view  returns (uint);
 function getETHPx(address pair) external view returns (uint);
+function getTokenPriceYmii(address t_pair) external view  returns (uint);
 }
 
 library Math {
@@ -533,6 +534,14 @@ contract StakeEbcV13 is Initializable,OwnableUpgradeable {
         return price;
     }
 
+    function TokenPriceYmii() public view returns (uint256) {        
+        uint256 price=stake2(_lpPriceTokenNew).getTokenPriceYmii(_lpToken);   //8241925389884116 ymii     10000000000000000 usdt 获取 u/ymii=12000..
+        // uint256 price=1200000000000000000;       
+        
+        return price;
+    }
+
+
 
  event ceshi(uint256 indexed beishu, uint256 indexed ymii, uint256 base);
         // //到期取消质押
@@ -608,17 +617,17 @@ contract StakeEbcV13 is Initializable,OwnableUpgradeable {
               
                     //算上个月 30天的账： 价值 每份10u的 对应 的ymii 数量  _priceLp
                     
-                    // t_backUsdt = SafeMath.mul(
-                    // SafeMath.mul(
-                    //         SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
-                    //     TokenPriceLV()),
-                    //     10);        
-
                     t_backUsdt = SafeMath.mul(
                     SafeMath.mul(
                             SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
-                        _priceLp),
-                        10);         
+                        TokenPriceLV()),
+                        10);        
+
+                    // t_backUsdt = SafeMath.mul(
+                    // SafeMath.mul(
+                    //         SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei),
+                    //     _priceLp),
+                    //     10);         
 
                     //     uint256 t_1=SafeMath.div(_userStakeA[msg.sender],70);
                     //     uint256 t_2=SafeMath.div(SafeMath.div(_userStakeA[msg.sender],70),_wei);                                            
